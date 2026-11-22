@@ -1,0 +1,2121 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>花都区政府 - 官方政务影像门户 - 权威发布城市新声</title>
+<meta name="description" content="花都区政府官方网站视频门户，权威发布政务动态、城市文化与民生政策，汇聚原创影像内容与社区互动，传播可信赖的政府声音。">
+<meta property="og:title" content="花都区政府 - 官方政务影像门户">
+<meta property="og:description" content="花都区政府官方网站，权威发布政务动态与城市影像，构建高品质政务内容生态。">
+<meta property="og:type" content="website">
+<style>
+:root{
+  --navy:#0b2a4a;
+  --navy-2:#123d66;
+  --blue:#1f6fb2;
+  --sky:#e8f1f8;
+  --gold:#c8952c;
+  --gold-soft:#f2e3bd;
+  --ink:#1a2430;
+  --muted:#5b6b7b;
+  --line:#d7e1ea;
+  --bg:#f5f8fb;
+  --white:#ffffff;
+  --radius:14px;
+  --shadow:0 8px 28px rgba(11,42,74,.10);
+  --shadow-sm:0 3px 12px rgba(11,42,74,.08);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:128px;}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,-apple-system,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;cursor:pointer;border:none;background:none;}
+img,svg{display:block;max-width:100%;}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px;}
+
+/* ============ 吸顶区：公告条 + 页头 ============ */
+.sticky-head{position:sticky;top:0;z-index:100;}
+
+.notice-bar{
+  background:linear-gradient(90deg,var(--navy) 0%,var(--navy-2) 55%,var(--blue) 100%);
+  color:#eaf3fb;font-size:13.5px;letter-spacing:.2px;
+}
+.notice-bar .wrap{
+  display:flex;align-items:center;gap:14px;min-height:40px;padding-top:6px;padding-bottom:6px;
+}
+.notice-tag{
+  flex:none;background:var(--gold);color:#2a1c00;font-weight:700;
+  font-size:11.5px;padding:2px 9px;border-radius:4px;letter-spacing:1px;
+}
+.notice-body{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.notice-body b{color:#ffd97a;font-weight:600;}
+.notice-more{flex:none;font-size:12.5px;color:#bfe0ff;border-bottom:1px dashed rgba(191,224,255,.5);}
+.notice-more:hover{color:#fff;}
+
+.site-header{
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+  box-shadow:0 2px 14px rgba(11,42,74,.05);
+}
+.header-inner{
+  display:flex;align-items:center;gap:26px;min-height:74px;
+}
+.brand{display:flex;align-items:center;gap:12px;flex:none;}
+.brand-mark{
+  width:46px;height:46px;border-radius:12px;flex:none;
+  background:linear-gradient(140deg,var(--navy) 0%,var(--blue) 100%);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 12px rgba(31,111,178,.35);
+}
+.brand-mark span{
+  color:#fff;font-size:20px;font-weight:800;letter-spacing:1px;
+}
+.brand-text b{display:block;font-size:19px;letter-spacing:1.5px;color:var(--navy);line-height:1.3;}
+.brand-text small{display:block;font-size:11px;color:var(--muted);letter-spacing:2.5px;text-transform:uppercase;}
+
+.main-nav{display:flex;align-items:center;gap:4px;margin-left:6px;flex:1;}
+.main-nav a{
+  font-size:14.5px;color:#2b3a4a;padding:8px 12px;border-radius:8px;
+  transition:.2s;white-space:nowrap;position:relative;
+}
+.main-nav a:hover{background:var(--sky);color:var(--blue);}
+.main-nav a.active{color:var(--blue);font-weight:600;}
+.main-nav a.active::after{
+  content:"";position:absolute;left:12px;right:12px;bottom:2px;height:2px;
+  background:var(--gold);border-radius:2px;
+}
+
+.header-tools{display:flex;align-items:center;gap:10px;flex:none;}
+.search-box{
+  display:flex;align-items:center;gap:6px;
+  background:var(--bg);border:1px solid var(--line);border-radius:22px;
+  padding:6px 6px 6px 14px;transition:.2s;
+}
+.search-box:focus-within{border-color:var(--blue);box-shadow:0 0 0 3px rgba(31,111,178,.12);}
+.search-box input{
+  border:none;background:transparent;outline:none;font-size:13.5px;width:150px;color:var(--ink);
+}
+.search-box input::placeholder{color:#93a3b3;}
+.search-btn{
+  width:28px;height:28px;border-radius:50%;background:var(--blue);
+  display:flex;align-items:center;justify-content:center;color:#fff;flex:none;
+}
+.search-btn:hover{background:var(--navy);}
+.search-feedback{
+  position:absolute;top:100%;left:0;right:0;
+  background:#fff;border:1px solid var(--line);border-radius:10px;
+  box-shadow:var(--shadow);padding:10px 16px;font-size:13.5px;
+  color:var(--muted);display:none;z-index:120;margin-top:6px;
+}
+.search-feedback.show{display:block;}
+.search-wrap{position:relative;}
+
+.btn-primary{
+  background:linear-gradient(135deg,var(--blue),var(--navy));
+  color:#fff;font-size:14px;padding:9px 20px;border-radius:22px;
+  font-weight:600;letter-spacing:.5px;transition:.25s;box-shadow:0 4px 14px rgba(31,111,178,.3);
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(31,111,178,.4);}
+.btn-ghost{
+  border:1px solid var(--navy);color:var(--navy);font-size:14px;
+  padding:8px 20px;border-radius:22px;font-weight:600;transition:.25s;
+}
+.btn-ghost:hover{background:var(--navy);color:#fff;}
+
+.menu-toggle{
+  display:none;width:42px;height:42px;border-radius:10px;
+  border:1px solid var(--line);align-items:center;justify-content:center;
+  background:#fff;flex-direction:column;gap:5px;
+}
+.menu-toggle span{display:block;width:20px;height:2px;background:var(--navy);border-radius:2px;transition:.25s;}
+.menu-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.menu-toggle.open span:nth-child(2){opacity:0;}
+.menu-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+/* ============ 首屏 ============ */
+.hero{
+  background:
+    radial-gradient(1200px 420px at 78% -8%,rgba(31,111,178,.18),transparent 62%),
+    radial-gradient(800px 360px at 8% 110%,rgba(200,149,44,.14),transparent 60%),
+    linear-gradient(170deg,#f5f9fc 0%,#e9f2f9 100%);
+  padding:60px 0 66px;position:relative;overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;
+  border-radius:50%;border:1px solid rgba(31,111,178,.18);
+}
+.hero::after{
+  content:"";position:absolute;right:-40px;top:-40px;width:260px;height:260px;
+  border-radius:50%;border:1px dashed rgba(200,149,44,.3);
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;position:relative;z-index:2;
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#fff;border:1px solid var(--line);border-radius:20px;
+  padding:5px 14px;font-size:12.5px;color:var(--blue);font-weight:600;
+  letter-spacing:1px;margin-bottom:20px;box-shadow:var(--shadow-sm);
+}
+.hero-eyebrow i{width:7px;height:7px;border-radius:50%;background:var(--gold);display:inline-block;}
+h1{
+  font-size:46px;line-height:1.22;letter-spacing:2px;color:var(--navy);
+  font-weight:800;margin-bottom:18px;
+}
+h1 span{
+  background:linear-gradient(120deg,var(--blue),var(--gold));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero-lead{
+  font-size:15.5px;color:#3c4d5e;line-height:1.95;margin-bottom:24px;max-width:560px;
+}
+.hero-lead strong{color:var(--navy);font-weight:600;}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:30px;}
+.hero-stats{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:520px;
+}
+.stat-card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:16px 16px 14px;box-shadow:var(--shadow-sm);position:relative;overflow:hidden;
+}
+.stat-card::before{
+  content:"";position:absolute;left:0;top:0;width:3px;height:100%;
+  background:linear-gradient(180deg,var(--blue),var(--gold));
+}
+.stat-num{font-size:26px;font-weight:800;color:var(--navy);letter-spacing:.5px;line-height:1.2;}
+.stat-num em{font-style:normal;font-size:14px;color:var(--blue);margin-left:2px;font-weight:700;}
+.stat-label{font-size:12.5px;color:var(--muted);margin-top:4px;letter-spacing:.5px;}
+
+.hero-visual{position:relative;}
+.hero-frame{
+  border-radius:20px;overflow:hidden;box-shadow:0 22px 50px rgba(11,42,74,.22);
+  border:5px solid #fff;position:relative;
+}
+.hero-frame svg{width:100%;height:auto;display:block;}
+.hero-badge{
+  position:absolute;left:-14px;bottom:26px;background:#fff;border-radius:12px;
+  padding:12px 18px;box-shadow:var(--shadow);display:flex;align-items:center;gap:12px;
+}
+.hero-badge .dot{
+  width:38px;height:38px;border-radius:10px;background:var(--gold-soft);
+  display:flex;align-items:center;justify-content:center;flex:none;
+}
+.hero-badge b{display:block;font-size:14px;color:var(--navy);}
+.hero-badge small{display:block;font-size:11.5px;color:var(--muted);}
+
+/* ============ 通用区块 ============ */
+.section{padding:70px 0;}
+.section.alt{background:#fff;}
+.section-head{
+  display:flex;align-items:flex-end;justify-content:space-between;
+  gap:24px;margin-bottom:36px;flex-wrap:wrap;
+}
+.section-head-left{max-width:640px;}
+.kicker{
+  display:inline-flex;align-items:center;gap:8px;font-size:12.5px;
+  color:var(--gold);font-weight:700;letter-spacing:2px;margin-bottom:10px;
+}
+.kicker::before{content:"";width:22px;height:2px;background:var(--gold);border-radius:2px;}
+h2{
+  font-size:29px;color:var(--navy);letter-spacing:1.2px;font-weight:800;line-height:1.3;
+}
+.section-desc{font-size:14.5px;color:var(--muted);margin-top:10px;line-height:1.9;}
+.section-link{
+  font-size:14px;color:var(--blue);font-weight:600;white-space:nowrap;
+  border-bottom:1px dashed rgba(31,111,178,.45);padding-bottom:2px;
+}
+.section-link:hover{color:var(--navy);}
+
+/* ============ 焦点内容 ============ */
+.focus-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:24px;}
+.focus-main{
+  border-radius:18px;overflow:hidden;background:#fff;box-shadow:var(--shadow);
+  position:relative;cursor:pointer;transition:.3s;border:1px solid var(--line);
+}
+.focus-main:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(11,42,74,.16);}
+.focus-main .cover{position:relative;overflow:hidden;}
+.focus-main .cover svg{width:100%;height:auto;transition:.5s;}
+.focus-main:hover .cover svg{transform:scale(1.04);}
+.focus-main .body{padding:22px 24px 24px;}
+.tag-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;}
+.tag{
+  font-size:11.5px;padding:2px 10px;border-radius:12px;
+  background:var(--sky);color:var(--blue);font-weight:600;letter-spacing:.5px;
+}
+.tag.gold{background:var(--gold-soft);color:#8a6414;}
+.h3-title{font-size:21px;font-weight:700;color:var(--navy);line-height:1.5;margin-bottom:10px;}
+.focus-main .h3-title{font-size:23px;}
+.text{font-size:14px;color:var(--muted);line-height:1.9;}
+.meta-row{
+  display:flex;align-items:center;gap:16px;margin-top:16px;
+  font-size:12.5px;color:#7c8b9a;flex-wrap:wrap;
+}
+.meta-row .author{display:flex;align-items:center;gap:7px;color:var(--ink);font-weight:600;}
+.avatar{
+  width:26px;height:26px;border-radius:50%;flex:none;
+  display:flex;align-items:center;justify-content:center;
+  font-size:12px;font-weight:700;color:#fff;
+}
+.focus-side{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.mini-card{
+  background:#fff;border:1px solid var(--line);border-radius:14px;
+  overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;
+  transition:.28s;display:flex;flex-direction:column;
+}
+.mini-card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(11,42,74,.14);border-color:#bcd6ea;}
+.mini-card .thumb{position:relative;overflow:hidden;}
+.mini-card .thumb svg{width:100%;height:auto;}
+.mini-card .mini-body{padding:13px 15px 15px;flex:1;display:flex;flex-direction:column;}
+.mini-card .mini-title{font-size:14.5px;font-weight:700;color:var(--navy);line-height:1.5;margin-bottom:6px;}
+.mini-card .mini-meta{font-size:11.5px;color:#8494a4;margin-top:auto;display:flex;justify-content:space-between;align-items:center;}
+.pill{
+  position:absolute;top:10px;left:10px;background:rgba(11,42,74,.78);
+  color:#fff;font-size:11px;padding:2px 9px;border-radius:10px;backdrop-filter:blur(4px);
+}
+.play-badge{
+  position:absolute;right:10px;bottom:10px;width:34px;height:34px;border-radius:50%;
+  background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;
+  box-shadow:0 3px 10px rgba(0,0,0,.2);
+}
+
+/* ============ 视频流 ============ */
+.filter-bar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px;}
+.filter-chip{
+  font-size:13.5px;padding:7px 18px;border-radius:20px;
+  border:1px solid var(--line);background:#fff;color:#45596b;transition:.22s;font-weight:500;
+}
+.filter-chip:hover{border-color:var(--blue);color:var(--blue);}
+.filter-chip.active{background:var(--navy);border-color:var(--navy);color:#fff;box-shadow:0 4px 12px rgba(11,42,74,.25);}
+.video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+.video-card{
+  background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;
+  box-shadow:var(--shadow-sm);transition:.3s;display:flex;flex-direction:column;
+}
+.video-card:hover{transform:translateY(-5px);box-shadow:0 18px 38px rgba(11,42,74,.15);border-color:#b9d3e8;}
+.video-card .cover{position:relative;overflow:hidden;background:#dfeaf3;}
+.video-card .cover svg{width:100%;height:auto;transition:.5s;}
+.video-card:hover .cover svg{transform:scale(1.05);}
+.video-card .body{padding:16px 18px 18px;flex:1;display:flex;flex-direction:column;}
+.video-card .v-title{font-size:16.5px;font-weight:700;color:var(--navy);line-height:1.55;margin-bottom:8px;}
+.video-card .v-desc{font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:12px;}
+.video-card .v-footer{
+  display:flex;align-items:center;justify-content:space-between;
+  padding-top:12px;border-top:1px dashed var(--line);margin-top:auto;
+}
+.v-author{display:flex;align-items:center;gap:7px;font-size:12.5px;color:#40556a;font-weight:600;}
+.v-actions{display:flex;align-items:center;gap:6px;}
+.act-btn{
+  display:flex;align-items:center;gap:4px;font-size:12px;color:#7d8d9d;
+  padding:4px 7px;border-radius:14px;transition:.2s;
+}
+.act-btn:hover{background:var(--sky);color:var(--blue);}
+.act-btn.liked{color:#c0432f;}
+.act-btn.saved{color:var(--gold);}
+.act-btn svg{width:15px;height:15px;}
+
+/* ============ 专题企划 ============ */
+.topic-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.topic-card{
+  border-radius:16px;overflow:hidden;position:relative;background:#fff;
+  border:1px solid var(--line);box-shadow:var(--shadow-sm);transition:.3s;
+}
+.topic-card:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(11,42,74,.15);}
+.topic-card .t-cover svg{width:100%;height:auto;}
+.topic-card .t-body{padding:15px 16px 17px;}
+.topic-card .t-title{font-size:15.5px;font-weight:700;color:var(--navy);margin-bottom:6px;line-height:1.5;}
+.topic-card .t-desc{font-size:12.5px;color:var(--muted);line-height:1.75;margin-bottom:10px;}
+.status{
+  display:inline-flex;align-items:center;gap:5px;font-size:11.5px;
+  color:#1c7a4a;background:#e4f5ea;padding:2px 9px;border-radius:10px;font-weight:600;
+}
+.status.ongoing{color:#a06410;background:var(--gold-soft);}
+
+/* ============ 创作者 ============ */
+.creator-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.creator-card{
+  background:#fff;border:1px solid var(--line);border-radius:16px;
+  padding:24px 22px;box-shadow:var(--shadow-sm);transition:.3s;position:relative;overflow:hidden;
+}
+.creator-card::after{
+  content:"";position:absolute;right:-30px;top:-30px;width:90px;height:90px;
+  border-radius:50%;background:rgba(31,111,178,.06);
+}
+.creator-card:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(11,42,74,.13);border-color:#bcd6ea;}
+.creator-top{display:flex;align-items:center;gap:14px;margin-bottom:14px;}
+.creator-avatar{
+  width:56px;height:56px;border-radius:16px;flex:none;display:flex;
+  align-items:center;justify-content:center;font-size:22px;font-weight:800;color:#fff;
+  box-shadow:0 6px 16px rgba(11,42,74,.2);
+}
+.creator-name{font-size:17px;font-weight:700;color:var(--navy);line-height:1.3;}
+.creator-field{font-size:12.5px;color:var(--blue);font-weight:600;margin-top:3px;}
+.creator-bio{font-size:13px;color:var(--muted);line-height:1.85;margin-bottom:14px;min-height:72px;}
+.creator-stats{display:flex;gap:20px;border-top:1px dashed var(--line);padding-top:13px;}
+.creator-stats div b{display:block;font-size:17px;color:var(--navy);font-weight:800;line-height:1.2;}
+.creator-stats div small{font-size:11.5px;color:#8494a4;}
+
+/* ============ 故事随笔 ============ */
+.story-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.story-card{
+  background:#fff;border:1px solid var(--line);border-left:4px solid var(--gold);
+  border-radius:12px;padding:24px 24px 22px;box-shadow:var(--shadow-sm);transition:.3s;
+}
+.story-card:nth-child(2){border-left-color:var(--blue);}
+.story-card:nth-child(3){border-left-color:#2f8a6e;}
+.story-card:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(11,42,74,.12);}
+.story-quote{font-size:30px;color:var(--gold);line-height:1;font-family:Georgia,serif;margin-bottom:6px;opacity:.7;}
+.story-card h3{font-size:16.5px;color:var(--navy);font-weight:700;margin-bottom:10px;line-height:1.5;}
+.story-card p{font-size:13.5px;color:var(--muted);line-height:1.92;}
+.story-foot{display:flex;align-items:center;justify-content:space-between;margin-top:16px;font-size:12px;color:#8494a4;}
+
+/* ============ 影像墙 ============ */
+.wall{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:130px;gap:14px;}
+.wall-item{
+  border-radius:12px;overflow:hidden;position:relative;cursor:pointer;
+  box-shadow:var(--shadow-sm);transition:.3s;
+}
+.wall-item:hover{transform:scale(1.02);box-shadow:0 14px 32px rgba(11,42,74,.2);}
+.wall-item svg{width:100%;height:100%;}
+.wall-item .cap{
+  position:absolute;left:10px;right:10px;bottom:9px;color:#fff;font-size:12px;
+  font-weight:600;text-shadow:0 1px 6px rgba(0,0,0,.6);letter-spacing:.3px;
+}
+.wall-item.big{grid-column:span 2;grid-row:span 2;}
+.wall-item.wide{grid-column:span 2;}
+
+/* ============ 评价 ============ */
+.rate-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.rate-card{
+  background:#fff;border:1px solid var(--line);border-radius:14px;
+  padding:20px 20px 18px;box-shadow:var(--shadow-sm);transition:.28s;
+}
+.rate-card:hover{border-color:#b9d3e8;box-shadow:0 12px 26px rgba(11,42,74,.1);}
+.rate-head{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.stars{color:var(--gold);font-size:13px;letter-spacing:2px;}
+.rate-card p{font-size:13.5px;color:#3f5163;line-height:1.9;}
+.rate-user{font-size:12px;color:#8494a4;margin-top:12px;display:flex;justify-content:space-between;}
+
+/* ============ 动态 + FAQ 双栏 ============ */
+.two-col{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:start;}
+.news-list{display:flex;flex-direction:column;gap:0;}
+.news-item{
+  display:flex;gap:16px;padding:18px 0;border-bottom:1px dashed var(--line);transition:.2s;
+}
+.news-item:first-child{padding-top:0;}
+.news-date{
+  flex:none;width:62px;text-align:center;background:var(--sky);border-radius:10px;
+  padding:8px 0;color:var(--navy);
+}
+.news-date b{display:block;font-size:20px;font-weight:800;line-height:1.1;}
+.news-date small{font-size:11px;color:var(--blue);}
+.news-body h3{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:4px;line-height:1.5;}
+.news-body p{font-size:12.8px;color:var(--muted);line-height:1.75;}
+
+.faq-item{
+  background:#fff;border:1px solid var(--line);border-radius:12px;
+  margin-bottom:12px;overflow:hidden;box-shadow:var(--shadow-sm);
+}
+.faq-item summary{
+  list-style:none;cursor:pointer;padding:16px 46px 16px 18px;position:relative;
+  font-size:14.5px;font-weight:600;color:var(--navy);transition:.2s;
+}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item summary::after{
+  content:"+";position:absolute;right:18px;top:50%;transform:translateY(-50%);
+  font-size:20px;color:var(--blue);font-weight:400;transition:.25s;
+}
+.faq-item[open] summary::after{transform:translateY(-50%) rotate(45deg);}
+.faq-item summary:hover{background:var(--sky);}
+.faq-item .faq-answer{padding:0 18px 17px;font-size:13.3px;color:var(--muted);line-height:1.9;}
+
+/* ============ 联系/投稿 ============ */
+.contact-band{
+  background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 60%,var(--blue) 100%);
+  border-radius:20px;padding:44px 46px;color:#fff;position:relative;overflow:hidden;
+  display:grid;grid-template-columns:1.2fr .8fr;gap:36px;align-items:center;
+}
+.contact-band::before{
+  content:"";position:absolute;right:-80px;bottom:-100px;width:300px;height:300px;
+  border-radius:50%;border:1px solid rgba(255,255,255,.16);
+}
+.contact-band::after{
+  content:"";position:absolute;right:20px;top:-60px;width:180px;height:180px;
+  border-radius:50%;background:rgba(255,255,255,.05);
+}
+.contact-band h2{color:#fff;font-size:26px;margin-bottom:12px;position:relative;z-index:2;}
+.contact-band p{font-size:14px;color:#cfe3f3;line-height:1.9;max-width:560px;position:relative;z-index:2;}
+.contact-actions{display:flex;gap:14px;flex-wrap:wrap;position:relative;z-index:2;}
+.btn-gold{
+  background:var(--gold);color:#2a1c00;font-weight:700;font-size:14.5px;
+  padding:11px 26px;border-radius:24px;transition:.25s;box-shadow:0 6px 18px rgba(200,149,44,.35);
+}
+.btn-gold:hover{transform:translateY(-2px);background:#e0ac41;}
+.btn-line{
+  border:1px solid rgba(255,255,255,.6);color:#fff;font-size:14.5px;
+  padding:10px 26px;border-radius:24px;transition:.25s;font-weight:600;
+}
+.btn-line:hover{background:rgba(255,255,255,.14);}
+.contact-side{
+  display:flex;flex-direction:column;gap:14px;position:relative;z-index:2;
+}
+.contact-side .row{
+  display:flex;align-items:center;gap:12px;font-size:13.5px;color:#dcebf7;
+}
+.contact-side .ico{
+  width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,.12);
+  display:flex;align-items:center;justify-content:center;flex:none;
+}
+
+/* ============ 合作品牌 ============ */
+.partner-row{
+  display:grid;grid-template-columns:repeat(6,1fr);gap:16px;
+}
+.partner{
+  background:#fff;border:1px solid var(--line);border-radius:12px;
+  padding:20px 10px;text-align:center;font-size:13px;color:#4a5f72;font-weight:600;
+  letter-spacing:.5px;transition:.25s;
+}
+.partner:hover{color:var(--blue);border-color:#b9d3e8;transform:translateY(-3px);box-shadow:var(--shadow-sm);}
+
+/* ============ 页脚 ============ */
+footer{background:var(--navy);color:#c3d6e6;padding:56px 0 0;}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px;padding-bottom:40px;}
+.footer-brand b{font-size:19px;color:#fff;letter-spacing:1.5px;display:block;margin-bottom:12px;}
+.footer-brand p{font-size:13px;line-height:1.9;color:#9fb8cc;max-width:320px;}
+.footer-brand .f-motto{
+  display:inline-block;margin-top:14px;font-size:12px;color:var(--gold);
+  border:1px solid rgba(200,149,44,.5);padding:3px 12px;border-radius:12px;
+}
+.footer-col h4{color:#fff;font-size:14.5px;margin-bottom:14px;letter-spacing:1px;}
+.footer-col a{display:block;font-size:13px;color:#9fb8cc;line-height:2.1;transition:.2s;}
+.footer-col a:hover{color:#fff;}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.1);padding:20px 0 26px;
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  font-size:12.5px;color:#8199ad;
+}
+.footer-bottom a{color:#a7c2d6;}
+.footer-bottom a:hover{color:#fff;}
+
+/* ============ 悬浮工具 ============ */
+.back-top{
+  position:fixed;right:26px;bottom:30px;width:46px;height:46px;border-radius:50%;
+  background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 10px 24px rgba(11,42,74,.32);opacity:0;visibility:hidden;
+  transform:translateY(14px);transition:.3s;z-index:90;
+}
+.back-top.show{opacity:1;visibility:visible;transform:translateY(0);}
+.back-top:hover{background:var(--blue);}
+
+.toast{
+  position:fixed;left:50%;bottom:40px;transform:translate(-50%,20px);
+  background:rgba(11,42,74,.94);color:#fff;font-size:13.5px;
+  padding:11px 22px;border-radius:24px;box-shadow:0 10px 26px rgba(0,0,0,.25);
+  opacity:0;visibility:hidden;transition:.3s;z-index:300;backdrop-filter:blur(6px);
+}
+.toast.show{opacity:1;visibility:visible;transform:translate(-50%,0);}
+
+/* 弹窗 */
+.modal-mask{
+  position:fixed;inset:0;background:rgba(11,32,52,.55);backdrop-filter:blur(3px);
+  display:flex;align-items:center;justify-content:center;padding:20px;
+  opacity:0;visibility:hidden;transition:.25s;z-index:400;
+}
+.modal-mask.show{opacity:1;visibility:visible;}
+.modal{
+  background:#fff;border-radius:18px;max-width:460px;width:100%;
+  padding:30px 32px;box-shadow:0 30px 70px rgba(0,0,0,.3);
+  transform:translateY(16px);transition:.25s;
+}
+.modal-mask.show .modal{transform:translateY(0);}
+.modal h3{font-size:20px;color:var(--navy);margin-bottom:8px;}
+.modal .sub{font-size:13px;color:var(--muted);margin-bottom:18px;}
+.modal-field{margin-bottom:14px;}
+.modal-field label{display:block;font-size:12.5px;color:#40556a;font-weight:600;margin-bottom:6px;}
+.modal-field input,.modal-field textarea{
+  width:100%;border:1px solid var(--line);border-radius:9px;padding:10px 13px;
+  font-size:13.5px;font-family:inherit;outline:none;transition:.2s;color:var(--ink);
+}
+.modal-field input:focus,.modal-field textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(31,111,178,.12);}
+.modal-field textarea{resize:vertical;min-height:80px;}
+.modal-actions{display:flex;gap:12px;margin-top:20px;}
+.modal-actions .btn-primary,.modal-actions .btn-ghost{flex:1;text-align:center;border-radius:10px;padding:11px;}
+.modal-close{
+  position:absolute;right:20px;top:18px;font-size:22px;color:#8998a7;line-height:1;
+}
+.modal-close:hover{color:var(--navy);}
+.modal-wrap{position:relative;}
+
+/* 评论列表 */
+.comment-item{
+  display:flex;gap:12px;padding:12px 0;border-bottom:1px dashed var(--line);
+}
+.comment-item:last-child{border-bottom:none;}
+.comment-bubble{flex:1;}
+.comment-bubble .c-name{font-size:13px;font-weight:700;color:var(--navy);}
+.comment-bubble .c-text{font-size:13px;color:#45596b;line-height:1.8;margin-top:3px;}
+
+/* ============ 响应式 ============ */
+@media(max-width:1080px){
+  .video-grid{grid-template-columns:repeat(2,1fr);}
+  .topic-grid{grid-template-columns:repeat(2,1fr);}
+  .creator-grid{grid-template-columns:repeat(2,1fr);}
+  .wall{grid-template-columns:repeat(3,1fr);}
+  .partner-row{grid-template-columns:repeat(3,1fr);}
+}
+@media(max-width:900px){
+  html{scroll-padding-top:118px;}
+  .main-nav{
+    display:none;position:absolute;left:0;right:0;top:100%;
+    background:#fff;flex-direction:column;align-items:stretch;gap:0;
+    padding:8px 14px 14px;border-bottom:1px solid var(--line);
+    box-shadow:0 14px 26px rgba(11,42,74,.12);
+  }
+  .main-nav.open{display:flex;}
+  .main-nav a{padding:12px 14px;border-radius:8px;font-size:15px;}
+  .main-nav a.active::after{display:none;}
+  .menu-toggle{display:flex;}
+  .header-tools .search-wrap{display:none;}
+  .header-inner{position:relative;justify-content:space-between;}
+  .hero-grid{grid-template-columns:1fr;gap:34px;}
+  h1{font-size:36px;}
+  .focus-grid{grid-template-columns:1fr;}
+  .two-col{grid-template-columns:1fr;gap:40px;}
+  .contact-band{grid-template-columns:1fr;padding:34px 28px;}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:28px;}
+}
+@media(max-width:640px){
+  .wrap{padding:0 16px;}
+  .notice-body{white-space:normal;line-height:1.5;font-size:12.5px;}
+  .notice-bar .wrap{min-height:auto;padding-top:8px;padding-bottom:8px;gap:10px;}
+  .notice-more{display:none;}
+  h1{font-size:30px;letter-spacing:1px;}
+  h2{font-size:23px;}
+  .hero{padding:38px 0 46px;}
+  .hero-stats{grid-template-columns:1fr 1fr;}
+  .section{padding:48px 0;}
+  .video-grid{grid-template-columns:1fr;}
+  .topic-grid{grid-template-columns:1fr;}
+  .creator-grid{grid-template-columns:1fr;}
+  .story-grid{grid-template-columns:1fr;}
+  .rate-grid{grid-template-columns:1fr;}
+  .focus-side{grid-template-columns:1fr 1fr;}
+  .wall{grid-template-columns:repeat(2,1fr);grid-auto-rows:118px;}
+  .wall-item.big{grid-column:span 2;grid-row:span 1;}
+  .wall-item.wide{grid-column:span 2;}
+  .partner-row{grid-template-columns:1fr 1fr;}
+  .footer-grid{grid-template-columns:1fr;}
+  .back-top{right:16px;bottom:20px;}
+  .brand-text small{display:none;}
+  .hero-badge{left:6px;bottom:8px;padding:9px 13px;}
+  .contact-band{padding:28px 22px;}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="sticky-head">
+  <!-- 公告条 -->
+  <div class="notice-bar">
+    <div class="wrap">
+      <span class="notice-tag">最新</span>
+      <div class="notice-body">
+        <b>花都区政府官网视频频道</b>已上线「城市更新三年行动」专题影像，同步开放市民意见征集通道；政务服务微纪录片《窗口的一天》第六集发布；2024 年度城市文化影像征集报名通道开启。
+      </div>
+      <a class="notice-more" href="#updates">查看全部更新 →</a>
+    </div>
+  </div>
+
+  <!-- 页头 -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="花都区政府官方网站首页">
+        <div class="brand-mark"><span>花</span></div>
+        <div class="brand-text">
+          <b>花都区政府</b>
+          <small>HUADU GOVERNMENT</small>
+        </div>
+      </a>
+      <nav class="main-nav" id="mainNav">
+        <a href="#top" class="active">首页</a>
+        <a href="#focus">焦点影像</a>
+        <a href="#videos">政务视频</a>
+        <a href="#topics">专题企划</a>
+        <a href="#creators">创作者</a>
+        <a href="#updates">官方动态</a>
+        <a href="#contact">联系与投稿</a>
+      </nav>
+      <div class="header-tools">
+        <div class="search-wrap">
+          <div class="search-box">
+            <input type="text" id="searchInput" placeholder="搜索政策、影像、专题" aria-label="站内搜索">
+            <button class="search-btn" id="searchBtn" aria-label="搜索">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg>
+            </button>
+          </div>
+          <div class="search-feedback" id="searchFeedback"></div>
+        </div>
+        <a href="#contact" class="btn-primary">投稿入口</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="展开导航菜单" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="hero-eyebrow"><i></i>官方网站 · 权威发布 · 政务影像门户</div>
+        <h1>花都区政府 <span>城市影像官网</span></h1>
+        <p class="hero-lead">
+          作为花都区对外传播与政务服务融合的<strong>官方网站</strong>影像平台，我们以原创纪实影像记录城市治理、产业发展与民生温度。
+          平台深耕政务内容垂直领域，汇聚机关创作者、社区记录者与市民拍客，持续输出高清、专业、值得信赖的<strong>精品内容</strong>，
+          构建开放多元的区域内容生态，让每一次政策解读、每一段街巷故事都能被真实看见。
+        </p>
+        <div class="hero-actions">
+          <a href="#videos" class="btn-primary">浏览政务视频</a>
+          <a href="#topics" class="btn-ghost">查看专题企划</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-card">
+            <div class="stat-num" data-count="1286">0</div>
+            <div class="stat-label">原创影像作品</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" data-count="342">0<em>万</em></div>
+            <div class="stat-label">年度内容触达</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" data-count="96">0<em>位</em></div>
+            <div class="stat-label">认证创作者</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-frame">
+          <svg viewBox="0 0 640 420" role="img" aria-label="花都区政府城市天际线与政务服务大厅主视觉插画">
+            <defs>
+              <linearGradient id="skyA" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#dcecf8"/>
+                <stop offset="1" stop-color="#f4f9fd"/>
+              </linearGradient>
+              <linearGradient id="bldA" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#1f6fb2"/>
+                <stop offset="1" stop-color="#0b2a4a"/>
+              </linearGradient>
+              <linearGradient id="bldB" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#7fb3dc"/>
+                <stop offset="1" stop-color="#3f83bb"/>
+              </linearGradient>
+              <linearGradient id="sunG" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#f5d78a"/>
+                <stop offset="1" stop-color="#c8952c"/>
+              </linearGradient>
+            </defs>
+            <rect width="640" height="420" fill="url(#skyA)"/>
+            <circle cx="500" cy="106" r="58" fill="url(#sunG)" opacity=".85"/>
+            <circle cx="500" cy="106" r="86" fill="none" stroke="#c8952c" stroke-opacity=".3" stroke-width="1.5"/>
+            <path d="M0 300 L150 232 L300 286 L470 214 L640 268 L640 420 L0 420 Z" fill="#cfe0ee" opacity=".55"/>
+            <rect x="70" y="196" width="86" height="190" rx="6" fill="url(#bldB)"/>
+            <rect x="168" y="150" width="104" height="236" rx="8" fill="url(#bldA)"/>
+            <rect x="286" y="238" width="72" height="148" rx="5" fill="#8fbde0"/>
+            <rect x="372" y="172" width="118" height="214" rx="8" fill="url(#bldB)"/>
+            <rect x="504" y="226" width="76" height="160" rx="6" fill="#5f9fcb"/>
+            <g fill="#f6fbff" opacity=".85">
+              <rect x="184" y="168" width="14" height="16" rx="2"/><rect x="210" y="168" width="14" height="16" rx="2"/>
+              <rect x="236" y="168" width="14" height="16" rx="2"/><rect x="184" y="196" width="14" height="16" rx="2"/>
+              <rect x="210" y="196" width="14" height="16" rx="2"/><rect x="236" y="196" width="14" height="16" rx="2"/>
+              <rect x="184" y="224" width="14" height="16" rx="2"/><rect x="236" y="224" width="14" height="16" rx="2"/>
+              <rect x="392" y="190" width="13" height="15" rx="2"/><rect x="416" y="190" width="13" height="15" rx="2"/>
+              <rect x="440" y="190" width="13" height="15" rx="2"/><rect x="392" y="216" width="13" height="15" rx="2"/>
+              <rect x="416" y="216" width="13" height="15" rx="2"/><rect x="440" y="216" width="13" height="15" rx="2"/>
+              <rect x="86" y="214" width="11" height="13" rx="2"/><rect x="106" y="214" width="11" height="13" rx="2"/>
+              <rect x="126" y="214" width="11" height="13" rx="2"/><rect x="86" y="238" width="11" height="13" rx="2"/>
+              <rect x="126" y="238" width="11" height="13" rx="2"/>
+            </g>
+            <rect x="0" y="368" width="640" height="52" fill="#0b2a4a" opacity=".9"/>
+            <g fill="#c8952c">
+              <rect x="46" y="386" width="38" height="4" rx="2"/>
+              <rect x="96" y="386" width="70" height="4" rx="2" opacity=".7"/>
+              <rect x="486" y="386" width="108" height="4" rx="2" opacity=".7"/>
+            </g>
+            <g>
+              <circle cx="320" cy="330" r="26" fill="#ffffff" opacity=".92"/>
+              <path d="M310 320 L336 330 L310 340 Z" fill="#1f6fb2"/>
+            </g>
+          </svg>
+        </div>
+        <div class="hero-badge">
+          <div class="dot">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8a6414" stroke-width="2" stroke-linecap="round"><path d="M12 3l2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8z"/></svg>
+          </div>
+          <div>
+            <b>政务公开影像库</b>
+            <small>高清 · 原创 · 正版可溯源</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 焦点内容 -->
+  <section class="section" id="focus">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-head-left">
+          <div class="kicker">焦点影像</div>
+          <h2>本周重点推荐 · 官方发布</h2>
+          <p class="section-desc">聚焦城市治理、产业升级与民生服务的原创影像，由区融媒体中心与各部门联合出品，重点内容同步开放市民留言。</p>
+        </div>
+        <a class="section-link" href="#videos">进入视频库 →</a>
+      </div>
+
+      <div class="focus-grid">
+        <article class="focus-main">
+          <div class="cover">
+            <svg viewBox="0 0 760 428" role="img" aria-label="城市更新行动专题纪录片封面：老街区与新社区对比">
+              <defs>
+                <linearGradient id="fz1" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#0b2a4a"/><stop offset="1" stop-color="#3a7fb8"/>
+                </linearGradient>
+                <linearGradient id="fz2" x1="0" y1="1" x2="1" y2="0">
+                  <stop offset="0" stop-color="#c8952c"/><stop offset="1" stop-color="#f0d391"/>
+                </linearGradient>
+              </defs>
+              <rect width="760" height="428" fill="url(#fz1)"/>
+              <g opacity=".22" stroke="#bfe0ff" stroke-width="1">
+                <path d="M0 330 L760 250"/><path d="M0 372 L760 300"/><path d="M0 414 L760 350"/>
+              </g>
+              <g transform="translate(70,120)">
+                <rect x="0" y="120" width="120" height="140" rx="4" fill="#31597c" opacity=".85"/>
+                <rect x="140" y="70" width="150" height="190" rx="6" fill="url(#fz2)" opacity=".9"/>
+                <rect x="310" y="30" width="180" height="230" rx="8" fill="#e8f1f8"/>
+                <rect x="505" y="96" width="110" height="164" rx="5" fill="#5f9fcb" opacity=".9"/>
+                <g fill="#0b2a4a" opacity=".55">
+                  <rect x="20" y="140" width="14" height="18"/><rect x="48" y="140" width="14" height="18"/>
+                  <rect x="20" y="170" width="14" height="18"/><rect x="48" y="170" width="14" height="18"/>
+                  <rect x="160" y="92" width="16" height="18"/><rect x="192" y="92" width="16" height="18"/>
+                  <rect x="224" y="92" width="16" height="18"/><rect x="160" y="124" width="16" height="18"/>
+                  <rect x="224" y="124" width="16" height="18"/>
+                  <rect x="332" y="56" width="18" height="20"/><rect x="366" y="56" width="18" height="20"/>
+                  <rect x="400" y="56" width="18" height="20"/><rect x="434" y="56" width="18" height="20"/>
+                  <rect x="332" y="92" width="18" height="20"/><rect x="400" y="92" width="18" height="20"/>
+                  <rect x="434" y="92" width="18" height="20"/>
+                </g>
+              </g>
+              <rect x="0" y="0" width="760" height="428" fill="url(#fz1)" opacity="0"/>
+              <g>
+                <circle cx="650" cy="80" r="42" fill="#fff" opacity=".14"/>
+                <circle cx="650" cy="80" r="42" fill="none" stroke="#fff" stroke-opacity=".3"/>
+                <path d="M636 62 L672 80 L636 98 Z" fill="#fff" opacity=".92"/>
+              </g>
+              <rect x="0" y="330" width="760" height="98" fill="#081f36" opacity=".72"/>
+              <text x="44" y="378" fill="#fff" font-size="26" font-family="sans-serif" font-weight="700">城市更新三年行动 · 全景纪实</text>
+              <text x="44" y="408" fill="#bcd9f0" font-size="15" font-family="sans-serif">花都区住房和城乡建设局 × 区融媒体中心 联合出品</text>
+            </svg>
+          </div>
+          <div class="body">
+            <div class="tag-row">
+              <span class="tag gold">重点专题</span>
+              <span class="tag">城市更新</span>
+              <span class="tag">政务纪实</span>
+            </div>
+            <div class="h3-title">城市更新三年行动：从一条老街到十五分钟生活圈</div>
+            <p class="text">摄制组跟拍 14 个月，走访 9 个街道、36 个老旧小区，记录加装电梯、口袋公园、社区食堂背后的协商现场。全片以居民视角展开，呈现城市治理如何在细节中落地。</p>
+            <div class="meta-row">
+              <span class="author"><span class="avatar" style="background:linear-gradient(135deg,#1f6fb2,#0b2a4a)">融</span>区融媒体中心</span>
+              <span>时长 46:12</span>
+              <span>播放 28.6 万</span>
+              <span>2024-05-18</span>
+            </div>
+          </div>
+        </article>
+
+        <div class="focus-side">
+          <article class="mini-card">
+            <div class="thumb">
+              <svg viewBox="0 0 360 202" role="img" aria-label="政务服务大厅窗口微纪录片封面">
+                <rect width="360" height="202" fill="#e8f1f8"/>
+                <rect x="0" y="0" width="360" height="120" fill="#cfe0ee"/>
+                <rect x="26" y="46" width="110" height="76" rx="6" fill="#1f6fb2" opacity=".8"/>
+                <rect x="150" y="30" width="86" height="92" rx="6" fill="#c8952c" opacity=".85"/>
+                <rect x="250" y="58" width="84" height="64" rx="6" fill="#5f9fcb"/>
+                <rect x="0" y="120" width="360" height="82" fill="#0b2a4a" opacity=".85"/>
+                <circle cx="300" cy="46" r="26" fill="#fff" opacity=".16"/>
+                <path d="M292 34 L312 46 L292 58 Z" fill="#fff" opacity=".9"/>
+                <g fill="#f6fbff" opacity=".8"><rect x="42" y="62" width="12" height="14"/><rect x="64" y="62" width="12" height="14"/><rect x="86" y="62" width="12" height="14"/></g>
+                <text x="22" y="160" fill="#fff" font-size="15" font-family="sans-serif" font-weight="700">窗口的一天</text>
+                <text x="22" y="182" fill="#a9c8e2" font-size="11" font-family="sans-serif">第六集 · 一窗通办提速记</text>
+              </svg>
+              <span class="pill">政务纪实</span>
+            </div>
+            <div class="mini-body">
+              <div class="mini-title">窗口的一天：一窗通办如何提速 40%</div>
+              <div class="mini-meta"><span>区政务服务数据管理局</span><span>12.4 万播放</span></div>
+            </div>
+          </article>
+
+          <article class="mini-card">
+            <div class="thumb">
+              <svg viewBox="0 0 360 202" role="img" aria-label="花都产业园区智能制造车间影像封面">
+                <defs><linearGradient id="m2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#123d66"/><stop offset="1" stop-color="#1f6fb2"/></linearGradient></defs>
+                <rect width="360" height="202" fill="url(#m2)"/>
+                <g opacity=".3" stroke="#8fc6ec"><path d="M0 150 L360 110"/><path d="M0 176 L360 140"/></g>
+                <g fill="#c8952c"><rect x="34" y="96" width="54" height="60" rx="4"/><rect x="100" y="76" width="70" height="80" rx="4"/></g>
+                <g fill="#e8f1f8"><rect x="192" y="62" width="60" height="94" rx="4"/><rect x="264" y="88" width="62" height="68" rx="4"/></g>
+                <g fill="#0b2a4a" opacity=".5"><rect x="46" y="108" width="10" height="12"/><rect x="66" y="108" width="10" height="12"/><rect x="112" y="90" width="12" height="14"/><rect x="134" y="90" width="12" height="14"/></g>
+                <circle cx="300" cy="42" r="24" fill="#fff" opacity=".15"/>
+                <path d="M293 31 L311 42 L293 53 Z" fill="#fff" opacity=".9"/>
+                <text x="22" y="184" fill="#fff" font-size="14" font-family="sans-serif" font-weight="700">智造在花都</text>
+              </svg>
+              <span class="pill">产业观察</span>
+            </div>
+            <div class="mini-body">
+              <div class="mini-title">智造在花都：一条产线的数字化转身</div>
+              <div class="mini-meta"><span>区工业和信息化局</span><span>9.8 万播放</span></div>
+            </div>
+          </article>
+
+          <article class="mini-card">
+            <div class="thumb">
+              <svg viewBox="0 0 360 202" role="img" aria-label="花都湖湿地生态修复影像封面">
+                <rect width="360" height="202" fill="#e9f4ee"/>
+                <path d="M0 132 Q90 96 180 128 T360 120 L360 202 L0 202 Z" fill="#7fb89a" opacity=".8"/>
+                <path d="M0 158 Q120 128 220 154 T360 148 L360 202 L0 202 Z" fill="#3f8a6a" opacity=".85"/>
+                <circle cx="278" cy="52" r="30" fill="#f0d391"/>
+                <path d="M60 122 l16 -30 l16 30 z" fill="#2f6f53"/>
+                <path d="M96 122 l20 -40 l20 40 z" fill="#3f8a6a"/>
+                <path d="M136 122 l13 -24 l13 24 z" fill="#2f6f53"/>
+                <circle cx="316" cy="128" r="4" fill="#fff"/>
+                <path d="M300 30 L320 42 L300 54 Z" fill="#0b2a4a" opacity=".16"/>
+                <text x="22" y="186" fill="#0b2a4a" font-size="14" font-family="sans-serif" font-weight="700">花都湖·十年水岸</text>
+              </svg>
+              <span class="pill">生态影像</span>
+            </div>
+            <div class="mini-body">
+              <div class="mini-title">花都湖十年：一片湿地与 12 万只候鸟</div>
+              <div class="mini-meta"><span>市生态环境局花都分局</span><span>15.1 万播放</span></div>
+            </div>
+          </article>
+
+          <article class="mini-card">
+            <div class="thumb">
+              <svg viewBox="0 0 360 202" role="img" aria-label="花都非遗灰塑手艺人纪录片封面">
+                <rect width="360" height="202" fill="#f6efe2"/>
+                <rect x="0" y="0" width="360" height="60" fill="#e3d3b8"/>
+                <g>
+                  <circle cx="92" cy="118" r="34" fill="#c8952c" opacity=".9"/>
+                  <path d="M76 118 a16 16 0 0 0 32 0 a16 16 0 0 1 -32 0" fill="#8a6414"/>
+                  <rect x="58" y="150" width="68" height="52" rx="10" fill="#0b2a4a" opacity=".8"/>
+                  <circle cx="196" cy="112" r="30" fill="#1f6fb2" opacity=".85"/>
+                  <rect x="166" y="146" width="60" height="56" rx="10" fill="#31597c"/>
+                  <circle cx="292" cy="120" r="26" fill="#5f9fcb"/>
+                  <rect x="268" y="150" width="48" height="52" rx="9" fill="#1f6fb2" opacity=".7"/>
+                </g>
+                <text x="22" y="190" fill="#4a3a1e" font-size="14" font-family="sans-serif" font-weight="700">灰塑里的手艺守夜人</text>
+              </svg>
+              <span class="pill">在地文化</span>
+            </div>
+            <div class="mini-body">
+              <div class="mini-title">灰塑里的守夜人：三代匠人的屋顶手艺</div>
+              <div class="mini-meta"><span>区文化广电旅游体育局</span><span>7.2 万播放</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 政务视频流 -->
+  <section class="section alt" id="videos">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-head-left">
+          <div class="kicker">政务视频库</div>
+          <h2>持续运营的内容生态</h2>
+          <p class="section-desc">六大内容方向同步更新：政策解读、城市探索、民生服务、产业观察、文化记录与生态影像。所有内容均可按标签筛选，支持收藏与分享。</p>
+        </div>
+        <a class="section-link" href="#updates">更新日志 →</a>
+      </div>
+
+      <div class="filter-bar" id="filterBar">
+        <button class="filter-chip active" data-filter="all">全部内容</button>
+        <button class="filter-chip" data-filter="policy">政策解读</button>
+        <button class="filter-chip" data-filter="city">城市探索</button>
+        <button class="filter-chip" data-filter="life">民生服务</button>
+        <button class="filter-chip" data-filter="industry">产业观察</button>
+        <button class="filter-chip" data-filter="culture">文化记录</button>
+      </div>
+
+      <div class="video-grid" id="videoGrid">
+
+        <article class="video-card" data-cat="policy">
+          <div class="cover">
+            <svg viewBox="0 0 400 225" role="img" aria-label="人才引进新政解读视频封面：文件与流程图">
+              <rect width="400" height="225" fill="#e8f1f8"/>
+              <rect x="42" y="34" width="180" height="128" rx="8" fill="#fff" stroke="#bcd6ea"/>
+              <g fill="#1f6fb2" opacity=".8"><rect x="62" y="56" width="120" height="8" rx="4"/><rect x="62" y="76" width="140" height="6" rx="3"/><rect x="62" y="92" width="104" height="6" rx="3"/><rect x="62" y="108" width="128" height="6" rx="3"/></g>
+              <circle cx="300" cy="90" r="44" fill="#c8952c" opacity=".9"/>
+              <path d="M286 74 L312 90 L286 106 Z" fill="#fff"/>
+              <rect x="246" y="150" width="110" height="46" rx="8" fill="#0b2a4a" opacity=".85"/>
+              <text x="262" y="179" fill="#fff" font-size="13" font-family="sans-serif" font-weight="700">一图读懂</text>
+              <text x="60" y="196" fill="#0b2a4a" font-size="13" font-family="sans-serif" font-weight="700">人才新政 · 十条措施</text>
+            </svg>
+            <span class="pill">政策解读</span>
+            <span class="play-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="#0b2a4a"><path d="M8 5v14l11-7z"/></svg></span>
+          </div>
+          <div class="body">
+            <div class="v-title">人才新政十条：落户、住房与创业补贴怎么申</div>
+            <p class="v-desc">区人力资源和社会保障局负责人逐条拆解 2024 年人才政策，附办理流程与常见材料清单，适合新来花都就业创业的青年人才参考。</p>
+            <div class="tag-row"><span class="tag">政策解读</span><span class="tag">办事指南</span></div>
+            <div class="v-footer">
+              <span class="v-author"><span class="avatar" style="background:linear-gradient(135deg,#1f6fb2,#123d66)">人</span>区人社局</span>
+              <div class="v-actions">
+                <button class="act-btn like-btn" data-likes="326"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H4a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1h3zm0 0l4.2-7.4A2 2 0 0 1 13 2.8l.6.3a2 2 0 0 1 1 2.3L13.6 9H19a2 2 0 0 1 2 2.3l-1.1 6.6A2 2 0 0 1 17.9 20H7"/></svg><span>326</span></button>
+                <button class="act-btn save-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.6-9.2-9A5.2 5.2 0 0 1 12 6.5 5.2 5.2 0 0 1 21.2 12C19 16.4 12 21 12 21z"/></svg><span>收藏</span></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="video-card" data-cat="city">
+          <div class="cover">
+            <svg viewBox="0 0 400 225" role="img" aria-label="花都老城街巷漫步视频封面：骑楼与街景">
+              <rect width="400" height="225" fill="#f4ede2"/>
+              <rect x="0" y="0" width="400" height="90" fill="#e0d3bd"/>
+              <g fill="#c8952c" opacity=".85"><rect x="20" y="70" width="80" height="90"/><rect x="112" y="58" width="70" height="102"/></g>
+              <g fill="#1f6fb2" opacity=".8"><rect x="196" y="76" width="92" height="84"/><rect x="300" y="64" width="80" height="96"/></g>
+              <g fill="#fff" opacity=".7"><rect x="34" y="88" width="18" height="24"/><rect x="60" y="88" width="18" height="24"/><rect x="124" y="76" width="16" height="22"/><rect x="148" y="76" width="16" height="22"/><rect x="212" y="94" width="18" height="22"/><rect x="240" y="94" width="18" height="22"/></g>
+              <rect x="0" y="160" width="400" height="65" fill="#0b2a4a" opacity=".82"/>
+              <text x="22" y="190" fill="#fff" font-size="14" font-family="sans-serif" font-weight="700">老街的一天 · 街巷漫步</text>
+              <circle cx="344" cy="188" r="18" fill="#fff" opacity=".18"/>
+              <path d="M338 180 L352 188 L338 196 Z" fill="#fff" opacity=".92"/>
+            </svg>
+            <span class="pill">城市探索</span>
+            <span class="play-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="#0b2a4a"><path d="M8 5v14l11-7z"/></svg></span>
+          </div>
+          <div class="body">
+            <div class="v-title">老街的一天：从早茶铺到修表摊的六小时</div>
+            <p class="v-desc">跟着镜头走过骑楼街、老市场与街角理发店，记录城市更新中保留下来的生活肌理。片中采访了 5 位在此经营超过二十年的店主。</p>
+            <div class="tag-row"><span class="tag">城市探索</span><span class="tag">在地文化</span></div>
+            <div class="v-footer">
+              <span class="v-author"><span class="avatar" style="background:linear-gradient(135deg,#c8952c,#8a6414)">融</span>区融媒体中心</span>
+              <div class="v-actions">
+                <button class="act-btn like-btn" data-likes="512"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H4a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1h3zm0 0l4.2-7.4A2 2 0 0 1 13 2.8l.6.3a2 2 0 0 1 1 2.3L13.6 9H19a2 2 0 0 1 2 2.3l-1.1 6.6A2 2 0 0 1 17.9 20H7"/></svg><span>512</span></button>
+                <button class="act-btn save-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.6-9.2-9A5.2 5.2 0 0 1 12 6.5 5.2 5.2 0 0 1 21.2 12C19 16.4 12 21 12 21z"/></svg><span>收藏</span></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="video-card" data-cat="life">
+          <div class="cover">
+            <svg viewBox="0 0 400 225" role="img" aria-label="社区食堂民生服务视频封面：餐盘与笑脸">
+              <rect width="400" height="225" fill="#fdf3e4"/>
+              <circle cx="126" cy="112" r="66" fill="#fff" stroke="#e8cda6"/>
+              <circle cx="126" cy="112" r="46" fill="#f2e3bd"/>
+              <g fill="#c8952c"><circle cx="110" cy="96" r="11"/><circle cx="142" cy="102" r="9"/><circle cx="118" cy="130" r="8"/></g>
+              <path d="M96 148 q30 22 60 0" stroke="#3f8a6a" stroke-width="7" fill="none" stroke-linecap="round"/>
+              <rect x="222" y="52" width="140" height="122" rx="12" fill="#fff" stroke="#e8cda6"/>
+              <g fill="#1f6fb2" opacity=".8"><rect x="242" y="74" width="66" height="8" rx="4"/><rect x="242" y="94" width="100" height="6" rx="3"/><rect x="242" y="110" width="84" height="6" rx="3"/><rect x="242" y="126" width="94" height="6" rx="3"/></g>
+              <text x="22" y="204" fill="#8a6414" font-size="13" font-family="sans-serif" font-weight="700">社区食堂 · 一餐热饭</text>
+            </svg>
+            <span class="pill">民生服务</span>
+            <span class="play-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="#0b2a4a"><path d="M8 5v14l11-7z"/></svg></span>
+          </div>
+          <div class="body">
+            <div class="v-title">社区食堂的十二元午餐：长者饭堂如何算这笔账</div>
+            <p class="v-desc">走访 4 个街道的长者饭堂，探访食材采购、营养配比与补贴机制，倾听老人与运营方各自的真实想法，是一份可复用的民生样本。</p>
+            <div class="tag-row"><span class="tag">民生服务</span><span class="tag">养老</span></div>
+            <div class="v-footer">
+              <span class="v-author"><span class="avatar" style="background:linear-gradient(135deg,#3f8a6a,#2f6f53)">民</span>区民政局</span>
+              <div class="v-actions">
+                <button class="act-btn like-btn" data-likes="418"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H4a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1h3zm0 0l4.2-7.4A2 2 0 0 1 13 2.8l.6.3a2 2 0 0 1 1 2.3L13.6 9H19a2 2 0 0 1 2 2.3l-1.1 6.6A2 2 0 0 1 17.9 20H7"/></svg><span>418</span></button>
+                <button class="act-btn save-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.6-9.2-9A5.2 5.2 0 0 1 12 6.5 5.2 5.2 0 0 1 21.2 12C19 16.4 12 21 12 21z"/></svg><span>收藏</span></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="video-card" data-cat="industry">
+          <div class="cover">
+            <svg viewBox="0 0 400 225" role="img" aria-label="汽车产业智能制造视频封面：机械臂与生产线">
+              <defs><linearGradient id="ind1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#123d66"/><stop offset="1" stop-color="#0b2a4a"/></linearGradient></defs>
+              <rect width="400" height="225" fill="url(#ind1)"/>
+              <g stroke="#5f9fcb" stroke-width="6" fill="none" stroke-linecap="round">
+                <path d="M96 168 L96 108 L152 108"/>
+                <circle cx="96" cy="168" r="10" fill="#c8952c" stroke="none"/>
+                <path d="M152 108 L188 84"/>
+              </g>
+              <rect x="196" y="126" width="120" height="58" rx="8" fill="#1f6fb2" opacity=".9"/>
+              <g fill="#c8952c"><circle cx="216" cy="184" r="12"/><circle cx="296" cy="184" r="12"/></g>
+              <g fill="#8fc6ec" opacity=".7"><rect x="216" y="142" width="76" height="6" rx="3"/><rect x="216" y="158" width="54" height="6" rx="3"/></g>
+              <circle cx="330" cy="60" r="26" fill="#fff" opacity=".12"/>
+              <text x="22" y="204" fill="#e8f1f8" font-size="13" font-family="sans-serif" font-weight="700">智能网联汽车 · 产线实测</text>
+            </svg>
+            <span class="pill">产业观察</span>
+            <span class="play-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="#0b2a4a"><path d="M8 5v14l11-7z"/></svg></span>
+          </div>
+          <div class="body">
+            <div class="v-title">智能网联汽车产线实测：每 72 秒下线一台车</div>
+            <p class="v-desc">走进花都汽车产业基地总装车间，观察自动化率提升后的岗位变化，访谈工程师与班组长，理解本地制造业升级的现实路径。</p>
+            <div class="tag-row"><span class="tag">产业观察</span><span class="tag">智能制造</span></div>
+            <div class="v-footer">
+              <span class="v-author"><span class="avatar" style="background:linear-gradient(135deg,#1f6fb2,#0b2a4a)">工</span>区工信局</span>
+              <div class="v-actions">
+                <button class="act-btn like-btn" data-likes="287"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H4a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1h3zm0 0l4.2-7.4A2 2 0 0 1 13 2.8l.6.3a2 2 0 0 1 1 2.3L13.6 9H19a2 2 0 0 1 2 2.3l-1.1 6.6A2 2 0 0 1 17.9 20H7"/></svg><span>287</span></button>
+                <button class="act-btn save-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.6-9.2-9A5.2 5.2 0 0 1 12 6.5 5.2 5.2 0 0 1 21.2 12C19 16.4 12 21 12 21z"/></svg><span>收藏</span></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="video-card" data-cat="culture">
+          <div class="cover">
+            <svg viewBox="0 0 400 225" role="img" aria-label="舞狮非遗传承视频封面：狮头与鼓">
+              <rect width="400" height="225" fill="#f7ece4"/>
+              <circle cx="120" cy="104" r="58" fill="#d94f3d" opacity=".9"/>
+              <circle cx="120" cy="104" r="38" fill="#f2c14e"/>
+              <g fill="#7b2417"><circle cx="106" cy="96" r="6"/><circle cx="134" cy="96" r="6"/></g>
+              <path d="M100 118 q20 16 40 0" stroke="#7b2417" stroke-width="6" fill="none" stroke-linecap="round"/>
+              <g><circle cx="256" cy="118" r="40" fill="#c8952c"/><circle cx="256" cy="118" r="30" fill="#f2e3bd"/><circle cx="256" cy="118" r="9" fill="#8a6414"/></g>
+              <rect x="308" y="70" width="60" height="96" rx="10" fill="#0b2a4a" opacity=".85"/>
+              <text x="22" y="204" fill="#7b2417" font-size="13" font-family="sans-serif" font-weight="700">醒狮 · 少年的鼓点</text>
+            </svg>
+            <span class="pill">文化记录</span>
+            <span class="play-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="#0b2a4a"><path d="M8 5v14l11-7z"/></svg></span>
+          </div>
+          <div class="body">
+            <div class="v-title">醒狮少年：一支乡村狮队如何传承到第四代</div>
+            <p class="v-desc">跟拍一支平均年龄 17 岁的醒狮队，从清晨扎马步到春节巡游，记录非遗在青少年群体中的新表达，也呈现教练的坚持与困惑。</p>
+            <div class="tag-row"><span class="tag">文化记录</span><span class="tag">非遗</span></div>
+            <div class="v-footer">
+              <span class="v-author"><span class="avatar" style="background:linear-gradient(135deg,#d94f3d,#8a2a1e)">文</span>区文广旅体局</span>
+              <div class="v-actions">
+                <button class="act-btn like-btn" data-likes="604"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H4a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1h3zm0 0l4.2-7.4A2 2 0 0 1 13 2.8l.6.3a2 2 0 0 1 1 2.3L13.6 9H19a2 2 0 0 1 2 2.3l-1.1 6.6A2 2 0 0 1 17.9 20H7"/></svg><span>604</span></button>
+                <button class="act-btn save-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.6-9.2-9A5.2 5.2 0 0 1 12 6.5 5.2 5.2 0 0 1 21.2 12C19 16.4 12 21 12 21z"/></svg><span>收藏</span></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="video-card" data-cat="policy">
+          <div class="cover">
+            <svg viewBox="0 0 400 225" role="img" aria-label="营商环境改革政策解读视频封面：柱状图与盖章">
+              <rect width="400" height="225" fill="#eef4fa"/>
+              <g fill="#1f6fb2" opacity=".85"><rect x="52" y="126" width="34" height="60" rx="4"/><rect x="98" y="98" width="34" height="88" rx="4"/><rect x="144" y="70" width="34" height="116" rx="4"/><rect x="190" y="108" width="34" height="78" rx="4"/></g>
+              <circle cx="308" cy="90" r="46" fill="none" stroke="#c8952c" stroke-width="6" stroke-dasharray="10 8"/>
+              <text x="286" y="98" fill="#8a6414" font-size="17" font-family="sans-serif" font-weight="800">壹</text>
+              <text x="22" y="206" fill="#0b2a4a" font-size="13" font-family="sans-serif" font-weight="700">营商环境 · 一网通办改革</text>
+            </svg>
+            <span class="pill">政策解读</span>
+            <span class="play-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="#0b2a4a"><path d="M8 5v14l11-7z"/></svg></span>
+          </div>
+          <div class="body">
+            <div class="v-title">一网通办改革：企业开办压缩到半个工作日的背后</div>
+            <p class="v-desc">从窗口受理到后台流转，拆解 12 个部门的协同机制，展示材料精简与数据共享的具体做法，附企业实际办理体验访谈。</p>
+            <div class="tag-row"><span class="tag">政策解读</span><span class="tag">营商环境</span></div>
+            <div class="v-footer">
+              <span class="v-author"><span class="avatar" style="background:linear-gradient(135deg,#1f6fb2,#123d66)">政</span>区政数局</span>
+              <div class="v-actions">
+                <button class="act-btn like-btn" data-likes="193"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H4a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1h3zm0 0l4.2-7.4A2 2 0 0 1 13 2.8l.6.3a2 2 0 0 1 1 2.3L13.6 9H19a2 2 0 0 1 2 2.3l-1.1 6.6A2 2 0 0 1 17.9 20H7"/></svg><span>193</span></button>
+                <button class="act-btn save-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.6-9.2-9A5.2 5.2 0 0 1 12 6.5 5.2 5.2 0 0 1 21.2 12C19 16.4 12 21 12 21z"/></svg><span>收藏</span></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 专题企划 -->
+  <section class="section" id="topics">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-head-left">
+          <div class="kicker">专题企划</div>
+          <h2>长期深耕的四大品牌专题</h2>
+          <p class="section-desc">每个专题由固定团队持续运营，按季度更新。专题内容均可参与市民投票与意见征集，让内容生产与公共决策形成闭环。</p>
+        </div>
+        <a class="section-link" href="#contact">合作与共建 →</a>
+      </div>
+
+      <div class="topic-grid">
+        <article class="topic-card">
+          <div class="t-cover">
+            <svg viewBox="0 0 300 170" role="img" aria-label="城市更新专题封面：楼宇吊塔剪影">
+              <rect width="300" height="170" fill="#123d66"/>
+              <g fill="#1f6fb2"><rect x="30" y="70" width="56" height="100"/><rect x="96" y="48" width="70" height="122"/></g>
+              <g fill="#c8952c"><rect x="176" y="86" width="46" height="84"/></g>
+              <g stroke="#8fc6ec" stroke-width="3" fill="none"><path d="M222 40 L222 130"/><path d="M222 40 L268 54"/><path d="M250 48 L250 90"/></g>
+              <circle cx="254" cy="112" r="16" fill="#e8f1f8" opacity=".8"/>
+              <text x="18" y="158" fill="#e8f1f8" font-size="13" font-family="sans-serif" font-weight="700">城市更新</text>
+            </svg>
+          </div>
+          <div class="t-body">
+            <div class="t-title">城市更新观察</div>
+            <p class="t-desc">记录老旧小区改造、口袋公园与十五分钟生活圈建设的全过程，附居民协商实录。</p>
+            <span class="status ongoing">● 更新至第 12 期</span>
+          </div>
+        </article>
+
+        <article class="topic-card">
+          <div class="t-cover">
+            <svg viewBox="0 0 300 170" role="img" aria-label="花都制造专题封面：齿轮与厂房">
+              <rect width="300" height="170" fill="#eef4fa"/>
+              <g fill="#1f6fb2" opacity=".9"><rect x="24" y="70" width="80" height="78"/><rect x="116" y="52" width="64" height="96"/></g>
+              <circle cx="212" cy="98" r="40" fill="#c8952c" opacity=".9"/>
+              <circle cx="212" cy="98" r="18" fill="#f2e3bd"/>
+              <g fill="#8a6414"><rect x="208" y="46" width="8" height="16"/><rect x="208" y="134" width="8" height="16"/><rect x="160" y="94" width="16" height="8"/><rect x="248" y="94" width="16" height="8"/></g>
+              <text x="18" y="160" fill="#0b2a4a" font-size="13" font-family="sans-serif" font-weight="700">花都制造</text>
+            </svg>
+          </div>
+          <div class="t-body">
+            <div class="t-title">花都制造 2024</div>
+            <p class="t-desc">走进汽车、声光电与智能装备企业，观察一条产线的技术迭代与人才结构变化。</p>
+            <span class="status ongoing">● 更新至第 9 期</span>
+          </div>
+        </article>
+
+        <article class="topic-card">
+          <div class="t-cover">
+            <svg viewBox="0 0 300 170" role="img" aria-label="花都记忆文化专题封面：古建筑与卷轴">
+              <rect width="300" height="170" fill="#f7ece4"/>
+              <rect x="0" y="0" width="300" height="40" fill="#e3d3b8"/>
+              <g fill="#8a2a1e" opacity=".85"><polygon points="46,120 86,70 126,120"/><rect x="66" y="118" width="40" height="34"/></g>
+              <g fill="#1f6fb2" opacity=".8"><polygon points="150,124 196,68 242,124"/><rect x="172" y="122" width="48" height="30"/></g>
+              <circle cx="262" cy="44" r="18" fill="#c8952c" opacity=".7"/>
+              <text x="18" y="160" fill="#7b2417" font-size="13" font-family="sans-serif" font-weight="700">花都记忆</text>
+            </svg>
+          </div>
+          <div class="t-body">
+            <div class="t-title">花都记忆·在地文化档案</div>
+            <p class="t-desc">系统梳理村落族谱、非遗工艺与方言童谣，以影像方式为城市留存文化底稿。</p>
+            <span class="status">● 已完结 8 期</span>
+          </div>
+        </article>
+
+        <article class="topic-card">
+          <div class="t-cover">
+            <svg viewBox="0 0 300 170" role="img" aria-label="水岸花都生态专题封面：湿地与飞鸟">
+              <rect width="300" height="170" fill="#e9f4ee"/>
+              <path d="M0 110 Q80 82 160 108 T300 100 L300 170 L0 170 Z" fill="#7fb89a" opacity=".85"/>
+              <path d="M0 134 Q100 112 190 132 T300 126 L300 170 L0 170 Z" fill="#3f8a6a"/>
+              <circle cx="240" cy="44" r="24" fill="#f0d391"/>
+              <g stroke="#2f6f53" stroke-width="3" fill="none" stroke-linecap="round"><path d="M56 96 q14 -10 28 0"/><path d="M96 88 q12 -9 24 0"/></g>
+              <text x="18" y="160" fill="#1f4d38" font-size="13" font-family="sans-serif" font-weight="700">水岸花都</text>
+            </svg>
+          </div>
+          <div class="t-body">
+            <div class="t-title">水岸花都·生态笔记</div>
+            <p class="t-desc">以年度周期记录湿地、河涌与绿道变化，用长期影像回应区域生态治理成效。</p>
+            <span class="status ongoing">● 更新至第 6 期</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 创作者矩阵 -->
+  <section class="section alt" id="creators">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-head-left">
+          <div class="kicker">创作者矩阵</div>
+          <h2>值得信赖的记录者</h2>
+          <p class="section-desc">来自机关、媒体、社区与院校的认证创作者，持续贡献原创内容。认证创作者可申请使用官方素材库与拍摄协调支持。</p>
+        </div>
+        <a class="section-link" href="#contact">申请认证 →</a>
+      </div>
+
+      <div class="creator-grid">
+        <article class="creator-card">
+          <div class="creator-top">
+            <div class="creator-avatar" style="background:linear-gradient(135deg,#1f6fb2,#0b2a4a)">融</div>
+            <div>
+              <div class="creator-name">区融媒体中心 · 纪实组</div>
+              <div class="creator-field">政务纪实 / 城市观察</div>
+            </div>
+          </div>
+          <p class="creator-bio">长期跟随区重点项目拍摄，擅长长周期跟拍与人物访谈，代表作品《城市更新三年行动》《窗口的一天》系列。</p>
+          <div class="creator-stats">
+            <div><b>286</b><small>作品数</small></div>
+            <div><b>42.6万</b><small>订阅</small></div>
+            <div><b>官方</b><small>认证</small></div>
+          </div>
+        </article>
+
+        <article class="creator-card">
+          <div class="creator-top">
+            <div class="creator-avatar" style="background:linear-gradient(135deg,#c8952c,#8a6414)">黄</div>
+            <div>
+              <div class="creator-name">黄老师拍老城</div>
+              <div class="creator-field">在地文化 / 街巷记录</div>
+            </div>
+          </div>
+          <p class="creator-bio">本地中学历史教师，业余拍摄老城街巷十一年。用课堂的方式讲城市，也用影像的方式讲课堂，作品被多家本地媒体转载。</p>
+          <div class="creator-stats">
+            <div><b>94</b><small>作品数</small></div>
+            <div><b>8.7万</b><small>订阅</small></div>
+            <div><b>金牌</b><small>认证</small></div>
+          </div>
+        </article>
+
+        <article class="creator-card">
+          <div class="creator-top">
+            <div class="creator-avatar" style="background:linear-gradient(135deg,#3f8a6a,#2f6f53)">绿</div>
+            <div>
+              <div class="creator-name">绿道观察员阿湛</div>
+              <div class="creator-field">生态记录 / 自然科普</div>
+            </div>
+          </div>
+          <p class="creator-bio">自然教育志愿者，专注候鸟与湿地影像，坚持每月发布一期生态笔记，累计拍摄鸟类影像四千余条。</p>
+          <div class="creator-stats">
+            <div><b>132</b><small>作品数</small></div>
+            <div><b>11.2万</b><small>订阅</small></div>
+            <div><b>专业</b><small>认证</small></div>
+          </div>
+        </article>
+
+        <article class="creator-card">
+          <div class="creator-top">
+            <div class="creator-avatar" style="background:linear-gradient(135deg,#d94f3d,#8a2a1e)">狮</div>
+            <div>
+              <div class="creator-name">醒狮少年团</div>
+              <div class="creator-field">非遗传承 / 青少年记录</div>
+            </div>
+          </div>
+          <p class="creator-bio">由本地青年狮队运营的创作账号，记录训练日常与巡游现场，也记录少年们在鼓点里的成长与困惑。</p>
+          <div class="creator-stats">
+            <div><b>67</b><small>作品数</small></div>
+            <div><b>6.4万</b><small>订阅</small></div>
+            <div><b>新锐</b><small>认证</small></div>
+          </div>
+        </article>
+
+        <article class="creator-card">
+          <div class="creator-top">
+            <div class="creator-avatar" style="background:linear-gradient(135deg,#5f9fcb,#31597c)">窗</div>
+            <div>
+              <div class="creator-name">窗口视角</div>
+              <div class="creator-field">政务服务 / 办事指南</div>
+            </div>
+          </div>
+          <p class="creator-bio">由政务服务中心一线人员共创，把办理流程做成三分钟短片，累计帮助上万名市民减少往返次数。</p>
+          <div class="creator-stats">
+            <div><b>158</b><small>作品数</small></div>
+            <div><b>19.8万</b><small>订阅</small></div>
+            <div><b>官方</b><small>认证</small></div>
+          </div>
+        </article>
+
+        <article class="creator-card">
+          <div class="creator-top">
+            <div class="creator-avatar" style="background:linear-gradient(135deg,#8a6414,#c8952c)">产</div>
+            <div>
+              <div class="creator-name">产线手记</div>
+              <div class="creator-field">产业观察 / 职业故事</div>
+            </div>
+          </div>
+          <p class="creator-bio">以一线工程师视角记录车间里的技术细节与职业选择，主张少一些口号，多一些工序与数据。</p>
+          <div class="creator-stats">
+            <div><b>76</b><small>作品数</small></div>
+            <div><b>5.9万</b><small>订阅</small></div>
+            <div><b>专业</b><small>认证</small></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 故事随笔 -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-head-left">
+          <div class="kicker">故事随笔</div>
+          <h2>影像之外的真实表达</h2>
+          <p class="section-desc">由创作者撰写的幕后手记，讲述镜头没有拍到的部分。文字内容同样纳入官方内容库，欢迎投稿。</p>
+        </div>
+      </div>
+
+      <div class="story-grid">
+        <article class="story-card">
+          <div class="story-quote">“</div>
+          <h3>在加装电梯的第三十七次协商会上</h3>
+          <p>那天下午我们等了两个小时，才等到六楼和一楼住户坐到同一张桌子前。镜头拍不到的是，会前双方各自在家里做了多少心理建设。片子最后留下的是握手的一瞬，但我更想记住那句被反复说了很多遍的话：大家再退一步。</p>
+          <div class="story-foot"><span>区融媒体中心 · 陈编导</span><span>2024-05-20</span></div>
+        </article>
+        <article class="story-card">
+          <div class="story-quote">“</div>
+          <h3>为什么我总是拍那条骑楼街</h3>
+          <p>十一年，我拍坏了三台机器。街上的店铺换了四轮，但修表摊的师傅还在。有人问我拍这些有什么用，我想说，等哪天这条街真的变了，至少我们还能翻出影像，看看它原来的样子，也看看住在这里的人是怎么生活的。</p>
+          <div class="story-foot"><span>黄老师拍老城</span><span>2024-05-11</span></div>
+        </article>
+        <article class="story-card">
+          <div class="story-quote">“</div>
+          <h3>把一件办事流程做成三分钟视频</h3>
+          <p>第一次拍完被同事笑了很久，说像念文件。后来我们改了一个思路：先让来办事的市民把问题骂出来，再一条条回答。视频发布后，窗口的重复咨询少了两成。这让我们确信，政务内容也可以做得好看，前提是真的站在办事人的位置上。</p>
+          <div class="story-foot"><span>窗口视角 · 共创团队</span><span>2024-04-28</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 影像墙 -->
+  <section class="section alt">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-head-left">
+          <div class="kicker">城市影像墙</div>
+          <h2>市民镜头里的花都</h2>
+          <p class="section-desc">来自投稿活动的入选作品，覆盖街景、生产、生态与人文。优秀作品将进入官方素材库，并获得年度影像征集展映资格。</p>
+        </div>
+        <a class="section-link" href="#contact">参与投稿 →</a>
+      </div>
+
+      <div class="wall">
+        <div class="wall-item big">
+          <svg viewBox="0 0 400 260" role="img" aria-label="清晨的花都湖绿道与晨跑者">
+            <rect width="400" height="260" fill="#dcecf8"/>
+            <circle cx="320" cy="58" r="34" fill="#f5d78a"/>
+            <path d="M0 176 Q110 146 210 172 T400 164 L400 260 L0 260 Z" fill="#7fb89a"/>
+            <path d="M0 204 Q120 178 240 202 T400 196 L400 260 L0 260 Z" fill="#3f8a6a"/>
+            <path d="M46 226 Q160 200 280 222 T400 214" stroke="#e8f1f8" stroke-width="10" fill="none" stroke-linecap="round"/>
+            <g fill="#0b2a4a"><circle cx="132" cy="196" r="7"/><rect x="127" y="204" width="10" height="18" rx="4"/></g>
+            <g fill="#1f6fb2"><circle cx="226" cy="192" r="7"/><rect x="221" y="200" width="10" height="18" rx="4"/></g>
+            <rect x="0" y="0" width="400" height="260" fill="#0b2a4a" opacity=".14"/>
+            <span class="cap">花都湖绿道·清晨六点</span>
+          </svg>
+          <span class="cap">花都湖绿道 · 清晨六点</span>
+        </div>
+        <div class="wall-item">
+          <svg viewBox="0 0 200 130" role="img" aria-label="骑楼街角的凉茶铺招牌">
+            <rect width="200" height="130" fill="#f4ede2"/>
+            <rect x="0" y="0" width="200" height="34" fill="#e0d3bd"/>
+            <rect x="22" y="34" width="60" height="96" fill="#c8952c"/>
+            <rect x="96" y="52" width="80" height="78" fill="#1f6fb2" opacity=".85"/>
+            <g fill="#fff" opacity=".8"><rect x="34" y="58" width="30" height="20"/><rect x="110" y="72" width="22" height="16"/><rect x="142" y="72" width="22" height="16"/></g>
+            <span class="cap">街角凉茶铺</span>
+          </svg>
+          <span class="cap">街角凉茶铺</span>
+        </div>
+        <div class="wall-item">
+          <svg viewBox="0 0 200 130" role="img" aria-label="智能车间里的机械臂近景">
+            <rect width="200" height="130" fill="#123d66"/>
+            <g stroke="#8fc6ec" stroke-width="5" fill="none" stroke-linecap="round"><path d="M50 110 L50 60 L100 60"/><path d="M100 60 L128 44"/></g>
+            <circle cx="50" cy="110" r="8" fill="#c8952c"/>
+            <rect x="130" y="70" width="50" height="34" rx="6" fill="#1f6fb2"/>
+            <span class="cap">车间里的第七道工序</span>
+          </svg>
+          <span class="cap">车间第七道工序</span>
+        </div>
+        <div class="wall-item wide">
+          <svg viewBox="0 0 400 130" role="img" aria-label="春节巡游中的醒狮队伍">
+            <rect width="400" height="130" fill="#7b2417"/>
+            <g fill="#f2c14e"><circle cx="80" cy="66" r="30"/><circle cx="200" cy="60" r="26"/><circle cx="318" cy="68" r="30"/></g>
+            <g fill="#d94f3d"><circle cx="80" cy="66" r="16"/><circle cx="200" cy="60" r="14"/><circle cx="318" cy="68" r="16"/></g>
+            <g fill="#fff" opacity=".8"><rect x="0" y="104" width="400" height="5"/><rect x="0" y="118" width="400" height="5"/></g>
+            <span class="cap">巡游日的醒狮队</span>
+          </svg>
+          <span class="cap">巡游日的醒狮队</span>
+        </div>
+        <div class="wall-item">
+          <svg viewBox="0 0 200 130" role="img" aria-label="湿地上的候鸟与芦苇">
+            <rect width="200" height="130" fill="#e9f4ee"/>
+            <path d="M0 96 Q60 76 120 94 T200 88 L200 130 L0 130 Z" fill="#7fb89a"/>
+            <path d="M60 96 q2 -22 0 -34" stroke="#3f8a6a" stroke-width="3" fill="none"/>
+            <path d="M140 94 q-2 -20 0 -30" stroke="#3f8a6a" stroke-width="3" fill="none"/>
+            <path d="M96 58 q10 -8 20 0 q-10 6 -20 0" fill="#0b2a4a"/>
+            <span class="cap">芦苇荡里的候鸟</span>
+          </svg>
+          <span class="cap">芦苇荡里的候鸟</span>
+        </div>
+        <div class="wall-item">
+          <svg viewBox="0 0 200 130" role="img" aria-label="夜间的政务服务大厅灯光">
+            <rect width="200" height="130" fill="#0b2a4a"/>
+            <rect x="26" y="44" width="150" height="86" rx="6" fill="#123d66"/>
+            <g fill="#f5d78a"><rect x="42" y="60" width="20" height="16"/><rect x="72" y="60" width="20" height="16"/><rect x="102" y="60" width="20" height="16"/><rect x="132" y="60" width="20" height="16"/><rect x="42" y="88" width="20" height="16"/><rect x="102" y="88" width="20" height="16"/><rect x="132" y="88" width="20" height="16"/></g>
+            <rect x="86" y="102" width="22" height="28" fill="#c8952c"/>
+            <span class="cap">大厅的灯还亮着</span>
+          </svg>
+          <span class="cap">大厅的灯还亮着</span>
+        </div>
+        <div class="wall-item">
+          <svg viewBox="0 0 200 130" role="img" aria-label="灰塑屋檐的传统工艺细节">
+            <rect width="200" height="130" fill="#f7ece4"/>
+            <path d="M0 60 L100 20 L200 60 L200 80 L0 80 Z" fill="#c8952c" opacity=".85"/>
+            <g stroke="#8a6414" stroke-width="3" fill="none"><path d="M40 74 q18 -14 36 0"/><path d="M104 74 q18 -14 36 0"/><path d="M160 74 q12 -10 24 0"/></g>
+            <rect x="0" y="80" width="200" height="50" fill="#e0d3bd"/>
+            <span class="cap">灰塑里的纹样</span>
+          </svg>
+          <span class="cap">灰塑里的纹样</span>
+        </div>
+        <div class="wall-item">
+          <svg viewBox="0 0 200 130" role="img" aria-label="社区口袋公园里的老人与孩子">
+            <rect width="200" height="130" fill="#e8f1f8"/>
+            <path d="M0 92 Q50 76 100 90 T200 86 L200 130 L0 130 Z" fill="#7fb89a"/>
+            <circle cx="62" cy="80" r="9" fill="#c8952c"/>
+            <rect x="55" y="90" width="14" height="22" rx="6" fill="#8a6414"/>
+            <circle cx="128" cy="86" r="7" fill="#1f6fb2"/>
+            <rect x="122" y="94" width="12" height="18" rx="5" fill="#123d66"/>
+            <rect x="150" y="72" width="30" height="14" rx="4" fill="#c8952c" opacity=".7"/>
+            <span class="cap">口袋公园的下午</span>
+          </svg>
+          <span class="cap">口袋公园的下午</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 用户评价 -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-head-left">
+          <div class="kicker">用户口碑</div>
+          <h2>他们如何评价这个平台</h2>
+          <p class="section-desc">来自市民、企业与创作者的公开留言节选。我们保留原始表达，也持续回应每一条具体建议。</p>
+        </div>
+      </div>
+
+      <div class="rate-grid">
+        <article class="rate-card">
+          <div class="rate-head"><span class="avatar" style="background:linear-gradient(135deg,#1f6fb2,#0b2a4a)">李</span><span class="stars">★★★★★</span></div>
+          <p>加装电梯那期我们全家一起看的，片子里那个协商会我们楼也开过。第一次觉得政策不是贴在公告栏上的字，而是能对上自己家窗户的事。</p>
+          <div class="rate-user"><span>李文女士 · 新华街居民</span><span>2024-05-21</span></div>
+        </article>
+        <article class="rate-card">
+          <div class="rate-head"><span class="avatar" style="background:linear-gradient(135deg,#c8952c,#8a6414)">陈</span><span class="stars">★★★★★</span></div>
+          <p>作为企业办事人员，一网通办那期视频帮了大忙。把材料清单和时限讲得很清楚，比翻文件快多了。希望后续能加上常见退件原因。</p>
+          <div class="rate-user"><span>陈先生 · 制造业企业行政</span><span>2024-05-16</span></div>
+        </article>
+        <article class="rate-card">
+          <div class="rate-head"><span class="avatar" style="background:linear-gradient(135deg,#3f8a6a,#2f6f53)">周</span><span class="stars">★★★★☆</span></div>
+          <p>生态笔记系列是我每周固定的期待。画面很稳，解说也不煽情。唯一想提的是希望能标注拍摄点位，方便带孩子去实地观察。</p>
+          <div class="rate-user"><span>周老师 · 小学科学教师</span><span>2024-05-12</span></div>
+        </article>
+        <article class="rate-card">
+          <div class="rate-head"><span class="avatar" style="background:linear-gradient(135deg,#d94f3d,#8a2a1e)">黄</span><span class="stars">★★★★★</span></div>
+          <p>投稿流程比想象中简单，后台有专人回复修改意见。我的老城系列有三条被官方素材库收录了，这对业余创作者是很大的鼓励。</p>
+          <div class="rate-user"><span>黄老师拍老城 · 认证创作者</span><span>2024-05-08</span></div>
+        </article>
+        <article class="rate-card">
+          <div class="rate-head"><span class="avatar" style="background:linear-gradient(135deg,#5f9fcb,#31597c)">吴</span><span class="stars">★★★★☆</span></div>
+          <p>整体内容质量在区级平台里属于上游，尤其喜欢人物访谈的克制表达。建议增加竖屏短版本，通勤时看更方便，也便于家庭群转发。</p>
+          <div class="rate-user"><span>吴同学 · 在校大学生</span><span>2024-05-03</span></div>
+        </article>
+        <article class="rate-card">
+          <div class="rate-head"><span class="avatar" style="background:linear-gradient(135deg,#8a6414,#c8952c)">冯</span><span class="stars">★★★★★</span></div>
+          <p>长者饭堂那条片子播出后，我们社区咨询电话多了不少，也促成了新的助餐点。内容能推动具体事情落地，这就是我最看重的价值。</p>
+          <div class="rate-user"><span>冯主任 · 社区居委会</span><span>2024-04-26</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 动态 + FAQ -->
+  <section class="section alt" id="updates">
+    <div class="wrap two-col">
+      <div>
+        <div class="kicker">官方动态</div>
+        <h2>持续更新的内容与活动</h2>
+        <p class="section-desc" style="margin-bottom:26px;">品牌资讯、内容更新与征集活动统一在此发布，重要节点同步在公告条提示。</p>
+
+        <div class="news-list">
+          <div class="news-item">
+            <div class="news-date"><b>28</b><small>05月</small></div>
+            <div class="news-body">
+              <h3>2024 年度城市文化影像征集开启报名</h3>
+              <p>面向市民与创作者征集城市记录类作品，设街巷、生产、生态、人文四个单元，入选作品将进入官方展映与素材库。</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <div class="news-date"><b>22</b><small>05月</small></div>
+            <div class="news-body">
+              <h3>《窗口的一天》第六集上线</h3>
+              <p>本集聚焦一窗通办改革，用时 12 分钟呈现材料精简与数据共享后的办理流程，附办理提示卡片。</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <div class="news-date"><b>15</b><small>05月</small></div>
+            <div class="news-body">
+              <h3>官方素材库开放第二批高清授权</h3>
+              <p>新增城市空镜、产业场景与生态影像共 480 条，认证创作者可申请用于非商业创作，需标注来源。</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <div class="news-date"><b>09</b><small>05月</small></div>
+            <div class="news-body">
+              <h3>创作者开放日报名通道开放</h3>
+              <p>每季度一次的线下交流活动，本期主题为「如何把政策讲成人话」，限额 60 人，报名后由工作人员确认。</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <div class="news-date"><b>30</b><small>04月</small></div>
+            <div class="news-body">
+              <h3>平台无障碍播放功能升级</h3>
+              <p>新增字幕字号调节与播放速度记忆，全部政务视频提供人工校对字幕，持续提升内容可达性。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="kicker">帮助中心</div>
+        <h2>常见问题</h2>
+        <p class="section-desc" style="margin-bottom:26px;">关于投稿、授权、内容合作与数据使用的说明，点击标题展开查看。</p>
+
+        <details class="faq-item" open>
+          <summary>如何向官方平台投稿？</summary>
+          <div class="faq-answer">通过页面底部「联系与投稿」入口填写作品信息，或将成片链接与素材说明发送至官方投稿邮箱。审核周期一般为 5 至 10 个工作日，通过后会收到修改或收录通知。</div>
+        </details>
+        <details class="faq-item">
+          <summary>投稿作品有什么题材与规格要求？</summary>
+          <div class="faq-answer">题材需与花都城市生活、公共治理、产业发展或文化生态相关，画幅建议 16:9，分辨率不低于 1080p，需为原创或已获完整授权。涉及人物出镜的内容须提供授权说明。</div>
+        </details>
+        <details class="faq-item">
+          <summary>官方素材库可以用于哪些场景？</summary>
+          <div class="faq-answer">认证创作者可申请用于非商业创作与公益传播，需保留来源标注且不得剪辑歪曲原意。商业用途须另行提交申请，由版权管理团队单独审核。</div>
+        </details>
+        <details class="faq-item">
+          <summary>视频字幕与信息准确性如何保障？</summary>
+          <div class="faq-answer">所有政策类视频由业务部门会签确认，字幕经过人工二次校对。若发现表述偏差，可通过页面反馈入口提交，我们会在核实后更新说明。</div>
+        </details>
+        <details class="faq-item">
+          <summary>是否可以申请到现场拍摄支持？</summary>
+          <div class="faq-answer">认证创作者在拍摄涉及公共设施、产业园区或特定活动时，可提前 7 个工作日提交协调申请，平台会协助对接相关单位，但不承诺一定获批。</div>
+        </details>
+        <details class="faq-item">
+          <summary>内容更新频率是怎样的？</summary>
+          <div class="faq-answer">政务视频库每周更新 2 至 4 条，专题企划按季度集中更新，官方动态随时发布。重要节点会通过顶部公告条和订阅通知同步提醒。</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 合作品牌 -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-head-left">
+          <div class="kicker">合作共建</div>
+          <h2>多元协作的内容伙伴</h2>
+          <p class="section-desc">与高校、企业、媒体及社会组织共同开展内容创作与公共传播项目，形成开放包容的内容生态。</p>
+        </div>
+      </div>
+      <div class="partner-row">
+        <div class="partner">区融媒体中心</div>
+        <div class="partner">本地高校传媒学院</div>
+        <div class="partner">汽车产业基地</div>
+        <div class="partner">市摄影家协会</div>
+        <div class="partner">社区文化联合会</div>
+        <div class="partner">生态保护志愿队</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系与投稿 -->
+  <section class="section" id="contact" style="padding-top:20px;">
+    <div class="wrap">
+      <div class="contact-band">
+        <div>
+          <h2>让好内容被更多人看见</h2>
+          <p>无论你是机关单位的内容负责人、独立创作者，还是愿意记录身边变化的普通市民，都欢迎与我们联系。投稿、合作、反馈与建议均可通过下方入口提交，团队会在工作日内回复。</p>
+          <div class="contact-actions" style="margin-top:22px;">
+            <button class="btn-gold" id="openSubmit">提交投稿</button>
+            <button class="btn-line" id="openFeedback">意见反馈</button>
+            <button class="btn-line" id="copyLink">复制本页链接</button>
+          </div>
+        </div>
+        <div class="contact-side">
+          <div class="row">
+            <span class="ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M4 5h16v14H4z"/><path d="M4 7l8 6 8-6"/></svg></span>
+            投稿邮箱：content@huadu-video.gov.example
+          </div>
+          <div class="row">
+            <span class="ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span>
+            内容合作：020-8888 0000（工作日 9:00-18:00）
+          </div>
+          <div class="row">
+            <span class="ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
+            办公地址：花都区政务服务中心 6 层内容运营部
+          </div>
+          <div class="row">
+            <span class="ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span>
+            投稿审核：5-10 个工作日，节假日顺延
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <b>花都区政府</b>
+        <p>花都区政府官方网站视频门户，由区融媒体中心与区政务服务数据管理局共同运营，持续输出原创、正版、高清的政务与城市影像内容，构建值得信赖的区域内容生态。</p>
+        <span class="f-motto">官方网站 · 持续运营中</span>
+      </div>
+      <div class="footer-col">
+        <h4>内容导航</h4>
+        <a href="#focus">焦点影像</a>
+        <a href="#videos">政务视频库</a>
+        <a href="#topics">专题企划</a>
+        <a href="#creators">创作者矩阵</a>
+      </div>
+      <div class="footer-col">
+        <h4>参与方式</h4>
+        <a href="#contact">作品投稿</a>
+        <a href="#contact">创作者认证</a>
+        <a href="#updates">征集与报名</a>
+        <a href="#updates">意见反馈</a>
+      </div>
+      <div class="footer-col">
+        <h4>关于平台</h4>
+        <a href="#top">品牌故事</a>
+        <a href="#updates">企业动态</a>
+        <a href="#updates">帮助中心</a>
+        <a href="#contact">联系我们</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 花都区政府官方网站 · 版权所有 · 内容未经授权不得转载</span>
+      <span>备案号占位：粤ICP备 00000000 号 &nbsp;|&nbsp; 主办单位：花都区人民政府办公室</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-top" id="backTop" aria-label="回到顶部">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+</button>
+
+<div class="toast" id="toast"></div>
+
+<!-- 投稿 / 反馈弹窗 -->
+<div class="modal-mask" id="modalMask">
+  <div class="modal modal-wrap">
+    <button class="modal-close" id="modalClose" aria-label="关闭弹窗">×</button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<!-- 评论弹窗 -->
+<div class="modal-mask" id="commentMask">
+  <div class="modal modal-wrap">
+    <button class="modal-close" id="commentClose" aria-label="关闭弹窗">×</button>
+    <h3>内容留言</h3>
+    <p class="sub">以下为平台已审核的公开留言节选，欢迎理性交流。</p>
+    <div id="commentList"></div>
+    <div class="modal-field" style="margin-top:16px;">
+      <label for="newComment">写下你的看法</label>
+      <textarea id="newComment" placeholder="请就内容本身发表看法，我们将择优展示"></textarea>
+    </div>
+    <div class="modal-actions">
+      <button class="btn-primary" id="sendComment">提交留言</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- 移动端导航 ---------- */
+  var menuToggle = document.getElementById('menuToggle');
+  var mainNav = document.getElementById('mainNav');
+  if(menuToggle && mainNav){
+    menuToggle.addEventListener('click', function(){
+      var open = mainNav.classList.toggle('open');
+      menuToggle.classList.toggle('open', open);
+      menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    mainNav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        mainNav.classList.remove('open');
+        menuToggle.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded','false');
+      });
+    });
+  }
+
+  /* ---------- 导航高亮 ---------- */
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.main-nav a'));
+  var sections = navLinks.map(function(a){
+    var id = a.getAttribute('href');
+    return id && id.length > 1 ? document.querySelector(id) : null;
+  });
+  window.addEventListener('scroll', function(){
+    var pos = window.scrollY + 180;
+    var current = 0;
+    sections.forEach(function(sec, i){
+      if(sec && sec.offsetTop <= pos) current = i;
+    });
+    navLinks.forEach(function(a, i){
+      a.classList.toggle('active', i === current);
+    });
+  }, {passive:true});
+
+  /* ---------- 搜索反馈 ---------- */
+  var searchInput = document.getElementById('searchInput');
+  var searchBtn = document.getElementById('searchBtn');
+  var searchFeedback = document.getElementById('searchFeedback');
+  function doSearch(){
+    var q = (searchInput.value || '').trim();
+    if(!q){
+      searchFeedback.textContent = '请输入关键词，例如「人才政策」「城市更新」「社区食堂」。';
+      searchFeedback.classList.add('show');
+      return;
+    }
+    var hits = [
+      '人才新政十条：落户、住房与创业补贴怎么申',
+      '城市更新三年行动：从一条老街到十五分钟生活圈',
+      '社区食堂的十二元午餐：长者饭堂如何算这笔账',
+      '一网通办改革：企业开办压缩到半个工作日的背后',
+      '醒狮少年：一支乡村狮队如何传承到第四代',
+      '窗口的一天：一窗通办如何提速 40%'
+    ].filter(function(t){ return t.indexOf(q) > -1; });
+    if(hits.length){
+      searchFeedback.innerHTML = '找到 <b>' + hits.length + '</b> 条相关内容：' + hits[0] + '。可前往「政务视频库」查看完整列表。';
+    }else{
+      searchFeedback.innerHTML = '暂未匹配到「' + q + '」的直接结果，已为你定位到政务视频库，建议使用更短的关键词重试。';
+    }
+    searchFeedback.classList.add('show');
+    setTimeout(function(){
+      var target = document.getElementById('videos');
+      if(target) target.scrollIntoView({behavior:'smooth'});
+    }, 700);
+  }
+  if(searchBtn){ searchBtn.addEventListener('click', doSearch); }
+  if(searchInput){
+    searchInput.addEventListener('keydown', function(e){
+      if(e.key === 'Enter'){ doSearch(); }
+    });
+    searchInput.addEventListener('input', function(){
+      if(!searchInput.value){ searchFeedback.classList.remove('show'); }
+    });
+  }
+
+  /* ---------- 标签筛选 ---------- */
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.filter-chip'));
+  var cards = Array.prototype.slice.call(document.querySelectorAll('#videoGrid .video-card'));
+  chips.forEach(function(chip){
+    chip.addEventListener('click', function(){
+      chips.forEach(function(c){ c.classList.remove('active'); });
+      chip.classList.add('active');
+      var f = chip.getAttribute('data-filter');
+      cards.forEach(function(card){
+        var show = (f === 'all') || (card.getAttribute('data-cat') === f);
+        card.style.display = show ? 'flex' : 'none';
+      });
+      showToast('已筛选：' + chip.textContent);
+    });
+  });
+
+  /* ---------- 点赞 / 收藏 ---------- */
+  document.querySelectorAll('.like-btn').forEach(function(btn){
+    var label = btn.querySelector('span');
+    var base = parseInt(btn.getAttribute('data-likes'), 10) || 0;
+    var liked = false;
+    btn.addEventListener('click', function(e){
+      e.stopPropagation();
+      liked = !liked;
+      var n = liked ? base + 1 : base;
+      label.textContent = n > 999 ? (n/1000).toFixed(1) + 'k' : n;
+      btn.classList.toggle('liked', liked);
+      showToast(liked ? '已点赞，感谢你的支持' : '已取消点赞');
+    });
+  });
+
+  document.querySelectorAll('.save-btn').forEach(function(btn){
+    var label = btn.querySelector('span');
+    var saved = false;
+    btn.addEventListener('click', function(e){
+      e.stopPropagation();
+      saved = !saved;
+      btn.classList.toggle('saved', saved);
+      label.textContent = saved ? '已收藏' : '收藏';
+      var path = btn.querySelector('svg path');
+      if(path){
+        path.setAttribute('fill', saved ? 'currentColor' : 'none');
+      }
+      showToast(saved ? '已加入收藏，可在个人中心查看' : '已取消收藏');
+    });
+  });
+
+  /* ---------- 通用 Toast ---------- */
+  var toast = document.getElementById('toast');
+  var toastTimer = null;
+  function showToast(msg){
+    if(!toast) return;
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){
+      toast.classList.remove('show');
+    }, 2200);
+  }
+
+  /* ---------- 回到顶部 ---------- */
+  var backTop = document.getElementById('backTop');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 520){ backTop.classList.add('show'); }
+    else{ backTop.classList.remove('show'); }
+  }, {passive:true});
+  backTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  /* ---------- 数字滚动 ---------- */
+  var counters = document.querySelectorAll('.stat-num[data-count]');
+  var counted = false;
+  function runCounters(){
+    if(counted) return;
+    var hero = document.querySelector('.hero-stats');
+    if(!hero) return;
+    var rect = hero.getBoundingClientRect();
+    if(rect.top < window.innerHeight - 80){
+      counted = true;
+      counters.forEach(function(el){
+        var target = parseInt(el.getAttribute('data-count'), 10) || 0;
+        var em = el.querySelector('em');
+        var emText = em ? em.outerHTML : '';
+        var start = null, dur = 1200;
+        function step(ts){
+          if(!start) start = ts;
+          var p = Math.min((ts - start) / dur, 1);
+          var eased = 1 - Math.pow(1 - p, 3);
+          el.innerHTML = Math.round(target * eased) + emText;
+          if(p < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      });
+    }
+  }
+  window.addEventListener('scroll', runCounters, {passive:true});
+  runCounters();
+
+  /* ---------- 弹窗通用 ---------- */
+  var modalMask = document.getElementById('modalMask');
+  var modalContent = document.getElementById('modalContent');
+  var modalClose = document.getElementById('modalClose');
+
+  function openModal(html){
+    modalContent.innerHTML = html;
+    modalMask.classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(){
+    modalMask.classList.remove('show');
+    document.body.style.overflow = '';
+  }
+  modalClose.addEventListener('click', closeModal);
+  modalMask.addEventListener('click', function(e){
+    if(e.target === modalMask) closeModal();
+  });
+
+  document.getElementById('openSubmit').addEventListener('click', function(){
+    openModal(
+      '<h3>提交投稿</h3><p class="sub">请填写作品基本信息，审核周期约 5-10 个工作日，通过后我们会与你联系。</p>' +
+      '<div class="modal-field"><label for="sTitle">作品标题</label><input id="sTitle" type="text" placeholder="例如：老街的一天"></div>' +
+      '<div class="modal-field"><label for="sType">内容方向</label><input id="sType" type="text" placeholder="城市探索 / 政策解读 / 生态记录"></div>' +
+      '<div class="modal-field"><label for="sContact">联系方式</label><input id="sContact" type="text" placeholder="邮箱或手机号"></div>' +
+      '<div class="modal-actions"><button class="btn-primary" id="submitForm">提交</button></div>'
+    );
+    document.getElementById('submitForm').addEventListener('click', function(){
+      var t = document.getElementById('sTitle').value.trim();
+      var c = document.getElementById('sContact').value.trim();
+      if(!t || !c){
+        showToast('请填写作品标题与联系方式');
+        return;
+      }
+      closeModal();
+      showToast('投稿已提交，审核结果将通过所留方式通知');
+    });
+  });
+
+  document.getElementById('openFeedback').addEventListener('click', function(){
+    openModal(
+      '<h3>意见反馈</h3><p class="sub">你的具体建议会被逐条阅读，并转交对应内容团队处理。</p>' +
+      '<div class="modal-field"><label for="fbType">反馈类型</label><input id="fbType" type="text" placeholder="内容纠错 / 播放问题 / 合作建议"></div>' +
+      '<div class="modal-field"><label for="fbText">具体说明</label><textarea id="fbText" placeholder="请描述你遇到的问题或建议"></textarea></div>' +
+      '<div class="modal-actions"><button class="btn-primary" id="sendFeedback">提交反馈</button></div>'
+    );
+    document.getElementById('sendFeedback').addEventListener('click', function(){
+      var v = document.getElementById('fbText').value.trim();
+      if(!v){
+        showToast('请填写具体说明后再提交');
+        return;
+      }
+      closeModal();
+      showToast('反馈已收到，感谢你的认真建议');
+    });
+  });
+
+  /* ---------- 复制链接 ---------- */
+  document.getElementById('copyLink').addEventListener('click', function(){
+    var link = '花都区政府官方网站 · 政务影像门户';
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(link).then(function(){
+        showToast('链接已复制，可分享给同事与朋友');
+      }).catch(function(){
+        showToast('复制未成功，请手动分享本页');
+      });
+    }else{
+      showToast('当前环境不支持自动复制，请手动分享');
+    }
+  });
+
+  /* ---------- 评论弹窗 ---------- */
+  var commentMask = document.getElementById('commentMask');
+  var commentClose = document.getElementById('commentClose');
+  var commentList = document.getElementById('commentList');
+  var sampleComments = [
+    {name:'住在花城路',text:'更新进度公开透明，这点很好。希望多拍拍施工期间的居民生活。',c:'#1f6fb2'},
+    {name:'创业小林',text:'人才政策那期我反复看了三遍，材料清单很实用，少跑了两趟。',c:'#c8952c'},
+    {name:'摄影阿KEN',text:'画面调色舒服，长镜头用得有耐心，区级平台能做到这个水准不容易。',c:'#3f8a6a'},
+    {name:'社区工作者老刘',text:'建议加上政策变动的提示，我们向居民解释时也更有依据。',c:'#d94f3d'}
+  ];
+  function renderComments(){
+    commentList.innerHTML = sampleComments.map(function(c){
+      return '<div class="comment-item"><span class="avatar" style="background:' + c.c + '">' + c.name.charAt(0) + '</span>' +
+             '<div class="comment-bubble"><div class="c-name">' + c.name + '</div><div class="c-text">' + c.text + '</div></div></div>';
+    }).join('');
+  }
+  function openComment(){
+    renderComments();
+    commentMask.classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeComment(){
+    commentMask.classList.remove('show');
+    document.body.style.overflow = '';
+  }
+  commentClose.addEventListener('click', closeComment);
+  commentMask.addEventListener('click', function(e){
+    if(e.target === commentMask) closeComment();
+  });
+  document.getElementById('sendComment').addEventListener('click', function(){
+    var v = document.getElementById('newComment').value.trim();
+    if(!v){
+      showToast('请先写下你的看法');
+      return;
+    }
+    sampleComments.unshift({name:'本页访客', text:v, c:'#5f9fcb'});
+    document.getElementById('newComment').value = '';
+    renderComments();
+    showToast('留言已提交，将在审核后展示');
+  });
+
+  /* ---------- 卡片点击：作者信息 / 评论 ---------- */
+  document.querySelectorAll('.video-card').forEach(function(card){
+    card.addEventListener('click', function(e){
+      if(e.target.closest('.act-btn')) return;
+      var title = card.querySelector('.v-title');
+      var author = card.querySelector('.v-author');
+      var name = author ? author.textContent.trim() : '平台编辑';
+      openModal(
+        '<h3>' + (title ? title.textContent : '内容详情') + '</h3>' +
+        '<p class="sub">发布方：' + name + ' · 内容已通过官方审核</p>' +
+        '<p style="font-size:13.5px;color:#45596b;line-height:1.9;">本条内容由认证发布方提供，适用于公共信息传播与学习参考。支持收藏、分享与留言，如需转载或用于其他用途，请通过联系入口提交申请。</p>' +
+        '<div class="modal-actions"><button class="btn-primary" id="goComment">查看留言</button></div>'
+      );
+      var go = document.getElementById('goComment');
+      if(go){
+        go.addEventListener('click', function(){
+          closeModal();
+          setTimeout(openComment, 260);
+        });
+      }
+    });
+  });
+
+  /* ---------- 专题卡片点击 ---------- */
+  document.querySelectorAll('.topic-card').forEach(function(card){
+    card.addEventListener('click', function(){
+      var t = card.querySelector('.t-title');
+      var d = card.querySelector('.t-desc');
+      openModal(
+        '<h3>' + (t ? t.textContent : '专题详情') + '</h3>' +
+        '<p class="sub">专题企划 · 持续运营</p>' +
+        '<p style="font-size:13.5px;color:#45596b;line-height:1.9;">' + (d ? d.textContent : '') + '</p>' +
+        '<p style="font-size:13px;color:#7c8b9a;margin-top:10px;">该专题内容由固定团队按季度更新，欢迎通过投稿入口提交线索或参与共创。</p>'
+      );
+    });
+  });
+
+  /* ---------- 创作者卡片点击 ---------- */
+  document.querySelectorAll('.creator-card').forEach(function(card){
+    card.addEventListener('click', function(){
+      var n = card.querySelector('.creator-name');
+      var f = card.querySelector('.creator-field');
+      var b = card.querySelector('.creator-bio');
+      openModal(
+        '<h3>' + (n ? n.textContent : '创作者') + '</h3>' +
+        '<p class="sub">' + (f ? f.textContent : '') + ' · 官方认证</p>' +
+        '<p style="font-size:13.5px;color:#45596b;line-height:1.9;">' + (b ? b.textContent : '') + '</p>' +
+        '<p style="font-size:13px;color:#7c8b9a;margin-top:10px;">认证创作者可申请官方素材授权与拍摄协调支持，详情见帮助中心。</p>'
+      );
+    });
+  });
+
+  /* ---------- 作品墙点击 ---------- */
+  document.querySelectorAll('.wall-item').forEach(function(item){
+    item.addEventListener('click', function(){
+      var cap = item.querySelector('.cap');
+      openModal(
+        '<h3>' + (cap ? cap.textContent : '城市影像') + '</h3>' +
+        '<p class="sub">市民投稿入选作品 · 官方素材库收录</p>' +
+        '<p style="font-size:13.5px;color:#45596b;line-height:1.9;">该影像来自年度城市影像征集活动，展示了花都日常生活中的真实片段。作品已获作者授权用于公益传播，未经许可请勿另行使用。</p>'
+      );
+    });
+  });
+
+  /* ---------- Esc 关闭 ---------- */
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){
+      closeModal();
+      closeComment();
+    }
+  });
+
+  /* ---------- 首屏与卡片入场 ---------- */
+  var io = null;
+  if('IntersectionObserver' in window){
+    io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          en.target.style.opacity = '1';
+          en.target.style.transform = 'translateY(0)';
+          io.unobserve(en.target);
+        }
+      });
+    }, {threshold:0.12});
+    document.querySelectorAll('.video-card, .topic-card, .creator-card, .rate-card, .story-card, .wall-item').forEach(function(el){
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(18px)';
+      el.style.transition = 'opacity .6s ease, transform .6s ease';
+      io.observe(el);
+    });
+  }
+
+})();
+</script>
+
+</body>
+                  </html>
